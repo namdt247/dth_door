@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Frontend\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('fontend.layout_master');
-});
+Route::get('/', [UserController::class, 'homePage'])
+    ->name('user.homePage');
+
+Route::get('/about-us', [UserController::class, 'aboutUs'])
+    ->name('user.aboutUs');
+
+Route::get('/contact', [UserController::class, 'contact'])
+    ->name('user.contact');
+
+Route::get('/list-products', [UserController::class, 'getListProduct'])
+    ->name('user.listProduct');
+
+Route::get('/list-product/product/{id}', [UserController::class, 'detailProduct'])
+    ->name('user.detailProduct');
