@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-lg-8 col-md-8">
                 <ul class="top-info text-center text-md-left">
-                    <li><i class="fas fa-map-marker-alt"></i>
+                    <li>
+                        <i class="fas fa-map-marker-alt mb-1 mb-md-0"></i>
                         <p class="info-text">
                             Số 9, LK11B, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội
                         </p>
