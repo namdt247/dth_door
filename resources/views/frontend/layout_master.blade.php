@@ -17,7 +17,7 @@
 
     <!-- Favicon
     ================================================== -->
-    <link rel="icon" type="image/png" href="/frontend/images/favicon.png">
+    <link rel="icon" type="image/png" href="/frontend/images/logo_dth.jpg">
 
     <!-- CSS
     ================================================== -->
