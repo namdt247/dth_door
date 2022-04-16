@@ -1,3 +1,11 @@
+.logo-area-custom {
+    padding: 12px 0 !important;
+}
+
+.logo-homepage {
+    height: 75px !important;
+}
+
 .wrap-star i {
     color: #febd69;
 }
@@ -13,4 +21,26 @@
 .custom-view-detail {
     font-size: 12px !important;
     font-style: italic;
+}
+
+.image-product {
+    background-size: cover;
+    height: 300px;
+}
+
+.image-product-slide {
+    background-size: cover;
+    height: 500px;
+}
+
+.image-product-detail {
+    background-size: cover;
+    height: 150px;
+}
+
+/* Style mobile */
+@media screen and (max-width: 768px) {
+    .image-product {
+        height: 350px;
+    }
 }

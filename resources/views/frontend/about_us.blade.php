@@ -11,7 +11,7 @@
                             <h1 class="banner-title">Giới thiệu</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                                    <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Về chúng tôi</li>
                                 </ol>
                             </nav>
@@ -157,12 +157,6 @@
                                     <h3 class="ts-name">Mr. Thuỷ</h3>
                                     <p class="ts-designation">Tổng giám đốc</p>
                                     <p class="ts-description">DTH Door luôn tạo ra các giá trị khác biệt</p>
-{{--                                    <div class="team-social-icons">--}}
-{{--                                        <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>--}}
-{{--                                        <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>--}}
-{{--                                        <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>--}}
-{{--                                        <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>--}}
-{{--                                    </div><!--/ social-icons-->--}}
                                 </div>
                             </div><!--/ Team wrapper end -->
                         </div><!-- Team 1 end -->

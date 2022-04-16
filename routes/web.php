@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\UserController;
+use App\Http\Controllers\Frontend\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +24,8 @@ Route::get('/about-us', [UserController::class, 'aboutUs'])
 Route::get('/contact', [UserController::class, 'contact'])
     ->name('user.contact');
 
-Route::get('/list-products', [UserController::class, 'getListProduct'])
+Route::get('/list-products', [ProductController::class, 'getListProduct'])
     ->name('user.listProduct');
 
-Route::get('/list-product/product/{id}', [UserController::class, 'detailProduct'])
+Route::get('/list-products/product/{id}', [ProductController::class, 'detailProduct'])
     ->name('user.detailProduct');

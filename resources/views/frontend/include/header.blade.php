@@ -1,11 +1,11 @@
 <header id="header" class="header-one">
     <div class="bg-white">
         <div class="container">
-            <div class="logo-area">
+            <div class="logo-area logo-area-custom">
                 <div class="row align-items-center">
                     <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                        <a class="d-block" href="#">
-                            <img loading="lazy" src="/frontend/images/logo_dth_2.png" alt="dth" style="height: 50px">
+                        <a class="d-block" href="/">
+                            <img loading="lazy" src="/frontend/images/logo_dth_2.png" alt="dth" class="logo-homepage">
                         </a>
                     </div><!-- logo end -->
 
@@ -44,7 +44,7 @@
                             {{--                                    </div>--}}
                             {{--                                </li>--}}
                             <li class="header-get-a-quote">
-                                <a class="btn btn-primary" href="contact.html">Liên hệ ngay</a>
+                                <a class="btn btn-primary" href="/contact">Liên hệ ngay</a>
                             </li>
                         </ul><!-- Ul end -->
                     </div><!-- header right end -->

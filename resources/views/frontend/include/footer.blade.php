@@ -8,7 +8,7 @@
 {{--                         alt="Constra">--}}
 {{--                    <p>--}}
 {{--                        DTHDoor luôn cố gắng tận tâm đến từng chi tiết để đưa đến người tiêu dùng những sản phẩm chất lượng, an toàn và thẩm mỹ--}}
-{{--                    </p>--}}
+{{--                    </p>--}}0 0 0 .2rem rgba(108,117,125,.5)
                     <div>
                         <p>
                             <i class="fa fa-map-marker-alt mr-2"></i> Số 9, LK11B, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội
@@ -22,15 +22,21 @@
                     </div>
                     <div class="footer-social">
                         <ul>
-                            <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
-                                            class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i
-                                            class="fab fa-twitter"></i></a>
+                            <li>
+                                <a href="https://www.facebook.com/dthdoor68" aria-label="Facebook" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
                             </li>
-                            <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
-                                            class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://github.com/themefisher" aria-label="Github"><i
-                                            class="fab fa-github"></i></a></li>
+                            <li>
+                                <a href="#" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div><!-- Footer social end -->
                 </div><!-- Col end -->
@@ -48,11 +54,11 @@
                 <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
                     <h3 class="widget-title">Dịch vụ</h3>
                     <ul class="list-arrow">
-                        <li><a href="service-single.html">Tư vấn</a></li>
-                        <li><a href="service-single.html">Thiết kế</a></li>
-                        <li><a href="service-single.html">Sản xuất</a></li>
-                        <li><a href="service-single.html">Thi công</a></li>
-                        <li><a href="service-single.html">Hoàn thiện</a></li>
+                        <li><a href="#">Tư vấn</a></li>
+                        <li><a href="#">Thiết kế</a></li>
+                        <li><a href="#">Sản xuất</a></li>
+                        <li><a href="#">Thi công</a></li>
+                        <li><a href="#">Hoàn thiện</a></li>
                     </ul>
                 </div><!-- Col end -->
             </div><!-- Row end -->

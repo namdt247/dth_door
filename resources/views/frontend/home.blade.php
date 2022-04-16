@@ -11,8 +11,8 @@
                             <h2 class="slide-title" data-animation-in="slideInLeft">DTH Door</h2>
                             <h3 class="slide-sub-title" data-animation-in="slideInRight">Tận Tâm Đến Từng Chi Tiết</h3>
                             <p data-animation-in="slideInLeft" data-duration-in="1.2">
-                                <a href="#" class="slider btn btn-primary">Sản phẩm</a>
-                                <a href="#" class="slider btn btn-primary border">Liên hệ ngay</a>
+                                <a href="/list-products" class="slider btn btn-primary">Sản phẩm</a>
+                                <a href="/contact" class="slider btn btn-primary border">Liên hệ ngay</a>
                             </p>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                     </div><!-- Col end -->
                     <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
                         <div class="call-to-action-btn">
-                            <a class="btn btn-dark" href="#">Gửi yêu cầu</a>
+                            <a class="btn btn-dark" href="/contact">Gửi yêu cầu</a>
                         </div>
                     </div><!-- col end -->
                 </div><!-- row end -->
@@ -355,70 +355,58 @@
     </section>
 
     <!-- Project highlight -->
-    <section id="project-area" class="project-area solid-bg">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-12">
-                    {{--                    <h2 class="section-title">Dự án</h2>--}}
-                    <h3 class="section-sub-title">Sản phẩm nổi bật</h3>
+    @if(!empty($lstProductNewest) && $lstProductNewest->count())
+        <section id="project-area" class="project-area solid-bg">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <h2 class="section-title">Sản phẩm</h2>
+                        <h3 class="section-sub-title">Sản phẩm nổi bật</h3>
+                    </div>
                 </div>
-            </div>
-            <!--/ Title row end -->
+                <!--/ Title row end -->
 
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="latest-post">
-                        <div class="latest-post-media">
-                            <a href="news-single.html" class="latest-post-img">
-                                <img loading="lazy" class="img-fluid" src="/frontend/images/news/news1.jpg" alt="img">
-                            </a>
+                <div class="row">
+                    @foreach($lstProductNewest as $prd)
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="latest-post">
+                                <div class="latest-post-media">
+{{--                                    <a href="{!! route('user.detailProduct', $prd->id) !!}" class="latest-post-img">--}}
+{{--                                        <img loading="lazy" class="img-fluid" src="/frontend/images/news/news1.jpg" alt="img">--}}
+{{--                                    </a>--}}
+                                    <a href="{!! route('user.detailProduct', $prd->id) !!}" class="latest-post-img">
+                                        <div class="image-product" style="background-image:url({{$prd->large_photo}})">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="ts-service-info custom-ts-service-info">
+                                        <h3 class="service-box-title mt-2 mb-0">
+                                            <a href="{!! route('user.detailProduct', $prd->id) !!}">{!! $prd->name !!}</a>
+                                        </h3>
+                                        {{--                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>--}}
+                                        <a class="learn-more d-inline-block custom-view-detail" href="{!! route('user.detailProduct', $prd->id) !!}" aria-label="service-details">
+                                            <i class="fa fa-caret-right"></i> Chi tiết</a>
+                                    </div>
+                                </div>
+{{--                                <div class="post-body">--}}
+{{--                                    <h4 class="post-title">--}}
+{{--                                        <a href="{!! route('user.detailProduct', $prd->id) !!}" class="d-inline-block">{!! $prd->name !!}</a>--}}
+{{--                                    </h4>--}}
+{{--                                </div>--}}
+                            </div><!-- Latest post end -->
+                        </div><!-- 1st post col end -->
+                    @endforeach
+                    <div class="col-12">
+                        <div class="general-btn text-center">
+                            <a class="btn btn-primary" href="/list-products">Xem thêm</a>
                         </div>
-                        <div class="post-body">
-                            <h4 class="post-title">
-                                <a href="news-single.html" class="d-inline-block">Cửa nhôm Xingfa</a>
-                            </h4>
-                        </div>
-                    </div><!-- Latest post end -->
-                </div><!-- 1st post col end -->
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="latest-post">
-                        <div class="latest-post-media">
-                            <a href="news-single.html" class="latest-post-img">
-                                <img loading="lazy" class="img-fluid" src="/frontend/images/news/news2.jpg" alt="img">
-                            </a>
-                        </div>
-                        <div class="post-body">
-                            <h4 class="post-title">
-                                <a href="news-single.html" class="d-inline-block">Cửa nhôm Xingfa</a>
-                            </h4>
-                        </div>
-                    </div><!-- Latest post end -->
-                </div><!-- 2nd post col end -->
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="latest-post">
-                        <div class="latest-post-media">
-                            <a href="news-single.html" class="latest-post-img">
-                                <img loading="lazy" class="img-fluid" src="/frontend/images/news/news3.jpg" alt="img">
-                            </a>
-                        </div>
-                        <div class="post-body">
-                            <h4 class="post-title">
-                                <a href="news-single.html" class="d-inline-block">Cửa nhôm Xingfa</a>
-                            </h4>
-                        </div>
-                    </div><!-- Latest post end -->
-                </div><!-- 3rd post col end -->
-                <div class="col-12">
-                    <div class="general-btn text-center">
-                        <a class="btn btn-primary" href="projects.html">Xem thêm</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--/ Container end -->
-    </section>
+            <!--/ Container end -->
+        </section>
+    @endif
 
     <!-- Feedback -->
     <section class="content">
@@ -499,35 +487,35 @@
                     <div class="row all-clients">
                         <div class="col-sm-4 col-6">
                             <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client1.png"
+                                <a href="#"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client1.png"
                                                   alt="clients-logo"/></a>
                             </figure>
                         </div><!-- Client 1 end -->
 
                         <div class="col-sm-4 col-6">
                             <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client2.png"
+                                <a href="#"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client2.png"
                                                   alt="clients-logo"/></a>
                             </figure>
                         </div><!-- Client 2 end -->
 
                         <div class="col-sm-4 col-6">
                             <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client3.png"
+                                <a href="#"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client3.png"
                                                   alt="clients-logo"/></a>
                             </figure>
                         </div><!-- Client 3 end -->
 
                         <div class="col-sm-4 col-6">
                             <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client4.png"
+                                <a href="#"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client4.png"
                                                   alt="clients-logo"/></a>
                             </figure>
                         </div><!-- Client 4 end -->
 
                         <div class="col-sm-4 col-6">
                             <figure class="clients-logo">
-                                <a href="#!"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client5.png"
+                                <a href="#"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client5.png"
                                                   alt="clients-logo"/></a>
                             </figure>
                         </div><!-- Client 5 end -->
@@ -589,17 +577,17 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="latest-post">
                         <div class="latest-post-media">
-                            <a href="news-single.html" class="latest-post-img">
+                            <a href="#" class="latest-post-img">
                                 <img loading="lazy" class="img-fluid" src="/frontend/images/news/news1.jpg" alt="img">
                             </a>
                         </div>
                         <div class="post-body">
                             <h4 class="post-title">
-                                <a href="news-single.html" class="d-inline-block">Hà Đông</a>
+                                <a href="#" class="d-inline-block">Hà Đông</a>
                             </h4>
                             <div class="latest-post-meta">
                                 <span class="post-item-date">
-                                    <i class="fa fa-clock-o"></i> July 20, 2017
+                                    <i class="fa fa-clock-o"></i> July 20, 2021
                                 </span>
                             </div>
                         </div>
@@ -609,17 +597,17 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="latest-post">
                         <div class="latest-post-media">
-                            <a href="news-single.html" class="latest-post-img">
+                            <a href="#" class="latest-post-img">
                                 <img loading="lazy" class="img-fluid" src="/frontend/images/news/news2.jpg" alt="img">
                             </a>
                         </div>
                         <div class="post-body">
                             <h4 class="post-title">
-                                <a href="news-single.html" class="d-inline-block">Hà Đông</a>
+                                <a href="#" class="d-inline-block">Hà Đông</a>
                             </h4>
                             <div class="latest-post-meta">
                                 <span class="post-item-date">
-                                  <i class="fa fa-clock-o"></i> June 17, 2017
+                                  <i class="fa fa-clock-o"></i> June 17, 2021
                                 </span>
                             </div>
                         </div>
@@ -629,17 +617,17 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="latest-post">
                         <div class="latest-post-media">
-                            <a href="news-single.html" class="latest-post-img">
+                            <a href="#" class="latest-post-img">
                                 <img loading="lazy" class="img-fluid" src="/frontend/images/news/news3.jpg" alt="img">
                             </a>
                         </div>
                         <div class="post-body">
                             <h4 class="post-title">
-                                <a href="news-single.html" class="d-inline-block">Hà Đông</a>
+                                <a href="#" class="d-inline-block">Hà Đông</a>
                             </h4>
                             <div class="latest-post-meta">
                                 <span class="post-item-date">
-                                  <i class="fa fa-clock-o"></i> Aug 13, 2017
+                                  <i class="fa fa-clock-o"></i> Aug 13, 2021
                                 </span>
                             </div>
                         </div>

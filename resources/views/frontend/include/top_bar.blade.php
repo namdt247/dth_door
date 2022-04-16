@@ -15,7 +15,7 @@
             <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
                 <ul class="list-unstyled">
                     <li>
-                        <a title="Facebook" href="#">
+                        <a title="Facebook" href="https://www.facebook.com/dthdoor68" target="_blank">
                             <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
                         </a>
                         <a title="Twitter" href="#">
