@@ -29,8 +29,8 @@
                 <div class="col-lg-6">
                     <h3 class="column-title">Đôi lời về DTH Door</h3>
                     <p>
-                        Chuyên ản xuất và thi công trọn gói cửa nhôm kính,
-                        cửa kính cường lực, vách kính, lan can kính, cầu thang kính, cabin tắms...
+                        Chuyên sản xuất và thi công trọn gói cửa nhôm kính,
+                        cửa kính cường lực, vách kính, lan can kính, cầu thang kính, cabin tắm...
                     </p>
                     <blockquote>
                         <p>

@@ -35,7 +35,7 @@
             <!--/ Title row end -->
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-md-0 mb-1">
                     <div class="ts-service-box-bg text-center h-100">
                         <span class="ts-service-icon icon-round">
                             <i class="fas fa-map-marker-alt mr-0"></i>
@@ -47,7 +47,7 @@
                     </div>
                 </div><!-- Col 1 end -->
 
-                <div class="col-md-4">
+                <div class="col-md-4 mb-md-0 mb-1">
                     <div class="ts-service-box-bg text-center h-100">
                         <span class="ts-service-icon icon-round">
                             <i class="fa fa-envelope mr-0"></i>
@@ -59,7 +59,7 @@
                     </div>
                 </div><!-- Col 2 end -->
 
-                <div class="col-md-4">
+                <div class="col-md-4 mb-md-0 mb-1">
                     <div class="ts-service-box-bg text-center h-100">
                         <span class="ts-service-icon icon-round">
                             <i class="fa fa-phone-square mr-0"></i>
@@ -83,36 +83,36 @@
 
             <div class="row">
                 <div class="col-md-12">
-{{--                    <h3 class="column-title">Bạn cần tư vấn?</h3>--}}
-                    <h3 class="column-title">Liên hệ ngay để nhận tư vấn</h3>
+                    <h3 class="column-title">Bạn cần tư vấn?</h3>
+{{--                    <h3 class="column-title">Liên hệ ngay để nhận tư vấn</h3>--}}
                     <!-- contact form works with formspree.io  -->
                     <!-- contact form activation doc: https://docs.themefisher.com/constra/contact-form/ -->
-{{--                    <form id="contact-form" action="#" method="post" role="form">--}}
-{{--                        <div class="error-container"></div>--}}
-{{--                        <div class="row">--}}
-{{--                            <div class="col-md-6">--}}
-{{--                                <div class="form-group">--}}
-{{--                                    <label>Họ và tên</label>--}}
-{{--                                    <input class="form-control form-control-name" name="name" id="name" placeholder="" type="text" required>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-md-6">--}}
-{{--                                <div class="form-group">--}}
-{{--                                    <label>Số điện thoại</label>--}}
-{{--                                    <input class="form-control form-control-email" name="phone" id="phone" placeholder="" type="text"--}}
-{{--                                           required>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="form-group">--}}
-{{--                            <label>Lời nhắn</label>--}}
-{{--                            <textarea class="form-control form-control-message" name="message" id="message" lòng--}}
-{{--                                      placeholder="Vui lòng để lại lời nhắn tại đây" maxlength="1000" rows="10" required></textarea>--}}
-{{--                        </div>--}}
-{{--                        <div class="text-right"><br>--}}
-{{--                            <button class="btn btn-primary solid blank" type="submit">Gửi yêu cầu</button>--}}
-{{--                        </div>--}}
-{{--                    </form>--}}
+                    <form id="contact-form" action="#" method="post" role="form">
+                        <div class="error-container"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Họ và tên</label>
+                                    <input class="form-control form-control-name" name="name" id="name" placeholder="" type="text" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Số điện thoại</label>
+                                    <input class="form-control form-control-email" name="phone" id="phone" placeholder="" type="text"
+                                           required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Lời nhắn</label>
+                            <textarea class="form-control form-control-message" name="message" id="message" lòng
+                                      placeholder="Vui lòng để lại lời nhắn tại đây" maxlength="1000" rows="10" required></textarea>
+                        </div>
+                        <div class="text-right"><br>
+                            <button class="btn btn-primary solid blank" type="submit">Gửi yêu cầu</button>
+                        </div>
+                    </form>
                 </div>
 
             </div><!-- Content row -->

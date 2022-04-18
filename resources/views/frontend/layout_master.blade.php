@@ -44,6 +44,7 @@
 
     <!-- Header -->
     @include('frontend.include.header')
+    @include('frontend.include.header2')
 
     <!-- Main content -->
     @yield('content')

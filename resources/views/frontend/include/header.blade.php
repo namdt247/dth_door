@@ -1,4 +1,4 @@
-<header id="header" class="header-one">
+<header id="header" class="header-one d-md-block d-none">
     <div class="bg-white">
         <div class="container">
             <div class="logo-area logo-area-custom">
