@@ -36,8 +36,8 @@ class UserController extends Controller
     public function postContact(Request $request) {
         $isCreateContact = $this->contactService->createContact($request);
         if ($isCreateContact)
-            return redirect()->back()->with(['message' => 'Gửi yêu cầu thành công, chúng tôi sẽ sớm liên hệ với bạn']);
+            return redirect()->back()->with(['success_message' => 'Gửi yêu cầu thành công, chúng tôi sẽ sớm liên hệ với bạn']);
         else
-            return redirect()->back()->with(['message' => 'Gửi yêu cầu thất bại, vui lòng thử lại']);
+            return redirect()->back()->with(['error_message' => 'Gửi yêu cầu thất bại, vui lòng thử lại']);
     }
 }

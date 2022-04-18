@@ -26,6 +26,27 @@
     <section id="main-container" class="main-container">
         <div class="container">
 
+            <!-- Message -->
+            @if( \Illuminate\Support\Facades\Session::has('success_message'))
+                <div class="alert alert-success alert-dismissible mb-5">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4>
+                        <i class="icon fas fa-lg fa-check text-success"></i>
+                        Thành công
+                    </h4>
+                    {{ \Illuminate\Support\Facades\Session::get('success_message') }}
+                </div>
+            @elseif( \Illuminate\Support\Facades\Session::has('error_message'))
+                <div class="alert alert-danger alert-dismissible mb-5">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4>
+                        <i class="icon fas fa-lg fa-exclamation-triangle text-danger"></i>
+                        Thất bại
+                    </h4>
+                    {{ \Illuminate\Support\Facades\Session::get('error_message') }}
+                </div>
+            @endif
+
             <div class="row text-center">
                 <div class="col-12">
                     <h2 class="section-title">Văn phòng</h2>
@@ -87,30 +108,32 @@
 {{--                    <h3 class="column-title">Liên hệ ngay để nhận tư vấn</h3>--}}
                     <!-- contact form works with formspree.io  -->
                     <!-- contact form activation doc: https://docs.themefisher.com/constra/contact-form/ -->
-                    <form id="contact-form" action="#" method="post" role="form">
-                        <div class="error-container"></div>
+                    <form id="contact-form" action="/contact" method="post" role="form">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Họ và tên</label>
-                                    <input class="form-control form-control-name" name="name" id="name" placeholder="" type="text" required>
+                                    <input class="form-control form-control-name" name="txtFullName" id="txtFullName"
+                                           placeholder="" type="text" maxlength="100" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Số điện thoại</label>
-                                    <input class="form-control form-control-email" name="phone" id="phone" placeholder="" type="text"
-                                           required>
+                                    <input class="form-control form-control-email" name="txtPhone" id="txtPhone"
+                                           placeholder="" minlength="8" maxlength="12" type="text" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Lời nhắn</label>
-                            <textarea class="form-control form-control-message" name="message" id="message" lòng
-                                      placeholder="Vui lòng để lại lời nhắn tại đây" maxlength="1000" rows="10" required></textarea>
+                            <textarea class="form-control form-control-message" name="txtMessage" id="txtMessage"
+                                      placeholder="Vui lòng để lại lời nhắn tại đây" maxlength="1000"
+                                      rows="10" required></textarea>
                         </div>
                         <div class="text-right"><br>
-                            <button class="btn btn-primary solid blank" type="submit">Gửi yêu cầu</button>
+                            <button class="btn btn-primary solid blank btn-submit-contact" type="submit">Gửi yêu cầu</button>
                         </div>
                     </form>
                 </div>

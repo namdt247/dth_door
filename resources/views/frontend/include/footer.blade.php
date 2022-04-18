@@ -8,7 +8,7 @@
 {{--                         alt="Constra">--}}
 {{--                    <p>--}}
 {{--                        DTHDoor luôn cố gắng tận tâm đến từng chi tiết để đưa đến người tiêu dùng những sản phẩm chất lượng, an toàn và thẩm mỹ--}}
-{{--                    </p>--}}0 0 0 .2rem rgba(108,117,125,.5)
+{{--                    </p>--}}
                     <div>
                         <p>
                             <i class="fa fa-map-marker-alt mr-2"></i> Số 9, LK11B, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội

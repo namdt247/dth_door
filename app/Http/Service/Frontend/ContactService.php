@@ -3,15 +3,30 @@
 namespace App\Http\Service\Frontend;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactService extends FrontendService {
     public function createContact(Request $request) {
-        $arr = [
+        $data = [
             'fullName' => $request->txtFullName,
             'phone' => $request->txtPhone,
             'email' => $request->txtEmail,
             'message' => $request->txtMessage
         ];
-        return $this->repositoty_contact->createContact($arr);
+
+        $dataSendMail = [
+            'fullName' => $request->txtFullName,
+            'phone' => $request->txtPhone,
+            'email' => $request->txtEmail,
+            'txtMessage' => $request->txtMessage
+        ];
+
+        // Send mail
+        Mail::send('mail.notification', $dataSendMail, function ($message) {
+            $message->to('nam.dt247@gmail.com', 'Phòng tư vấn DTH')
+                ->subject('Khách hàng DTH Door cần tư vấn sản phẩm');
+            $message->from('noreply.dthdoor@gmail.com', 'DTH Door Support');
+        });
+        return $this->repositoty_contact->createContact($data);
     }
 }
