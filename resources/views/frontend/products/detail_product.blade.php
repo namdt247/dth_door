@@ -27,7 +27,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-xl-3 col-lg-4">
+                <div class="col-xl-3 col-lg-4 row1">
                     <div class="sidebar sidebar-left">
                         <div class="widget">
                             <h3 class="widget-title">Giải pháp</h3>
@@ -94,7 +94,7 @@
                                 @while($count < 3)
                                     @foreach($product->large_photos as $image)
                                         @if($count < 3)
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 row2">
                                                 <div class="item image-product-detail" style="background-image:url({{ $image }})">
                                                 </div>
                                             </div>

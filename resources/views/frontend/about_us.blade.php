@@ -45,7 +45,7 @@
                     </p>
                 </div><!-- Col end -->
 
-                <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="col-lg-6 mt-5 mt-lg-0 row1">
                     <div id="page-slider" class="page-slider small-bg">
                         <div class="item" style="background-image:url(/frontend/images/slider-pages/slide-page1.jpg)">
                             <div class="container">
@@ -84,7 +84,7 @@
     </section>
 
     <!-- Overview -->
-    <section id="facts" class="facts-area dark-bg">
+    <section id="facts" class="facts-area dark-bg row1">
         <div class="container">
             <div class="facts-wrapper">
                 <div class="row">
@@ -136,7 +136,7 @@
     </section>
 
     <!--/ Team member -->
-    <section id="ts-team" class="ts-team">
+    <section id="ts-team" class="ts-team ">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-12">

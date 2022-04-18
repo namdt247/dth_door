@@ -7,7 +7,7 @@
 }
 
 .wrap-star i {
-    color: #febd69;
+    color: #766a53;
 }
 
 .custom-ts-service-image-wrapper {
@@ -51,4 +51,27 @@
     .image-product {
         height: 350px;
     }
+
+    .row1 {
+        display: none;
+    }
+    .pb-0 {
+        margin-top: -100px;
+    }
+
+    .img-fluid1 {
+        display: none;
+    }
+   .banner-area {
+       display: none;
+   }
+
+   .ts-team {
+       margin-top: -100px;
+   }
+    .row2{
+      margin: 20px;
+    }
 }
+
+

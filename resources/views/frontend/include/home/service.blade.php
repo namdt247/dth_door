@@ -15,7 +15,7 @@
                         <img loading="lazy" src="/frontend/images/icon-image/service-icon1.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Thiết kế</a></h3>
                         <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
                     </div>
                 </div><!-- Service 1 end -->
