@@ -25,7 +25,7 @@
                         <img loading="lazy" src="/frontend/images/icon-image/service-icon2.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Thiết kế</a></h3>
                         <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
                     </div>
                 </div><!-- Service 2 end -->
@@ -35,7 +35,7 @@
                         <img loading="lazy" src="/frontend/images/icon-image/service-icon3.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Thiết kế</a></h3>
                         <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
                     </div>
                 </div><!-- Service 3 end -->
@@ -43,17 +43,17 @@
             </div><!-- Col end -->
 
             <div class="col-lg-4 text-center">
-                <img loading="lazy" class="img-fluid" src="/frontend/images/services/service-center.jpg"
+                <img loading="lazy" class="img-fluid img-fluid1" src="/frontend/images/services/service-center.jpg"
                      alt="service-avater-image">
             </div><!-- Col end -->
-
-            <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
+git
+            <div class="col-lg-4 md-0 mt-md-5 mb-4 mb-lg-0">
                 <div class="ts-service-box d-flex">
                     <div class="ts-service-box-img">
                         <img loading="lazy" src="/frontend/images/icon-image/service-icon4.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Thiết kế</a></h3>
                         <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
                     </div>
                 </div><!-- Service 4 end -->
@@ -63,7 +63,7 @@
                         <img loading="lazy" src="/frontend/images/icon-image/service-icon5.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Thiết kế</a></h3>
                         <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
                     </div>
                 </div><!-- Service 5 end -->
@@ -73,7 +73,7 @@
                         <img loading="lazy" src="/frontend/images/icon-image/service-icon6.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Thiết kế</a></h3>
                         <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
                     </div>
                 </div><!-- Service 6 end -->
