@@ -1,5 +1,5 @@
 .logo-area-custom {
-    padding: 12px 0 !important;
+    padding: 24px 0 !important;
 }
 
 .logo-homepage {
@@ -36,6 +36,18 @@
 .image-product-detail {
     background-size: cover;
     height: 150px;
+}
+
+.clients-logo img {
+    -webkit-filter: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    filter: none !important;
+}
+
+.highlight-project {
+    height: 300px;
+    background-size: cover;
 }
 
 /* Style mobile */

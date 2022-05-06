@@ -30,14 +30,11 @@
                 <div class="col-xl-3 col-lg-4 row1">
                     <div class="sidebar sidebar-left">
                         <div class="widget">
-                            <h3 class="widget-title">Giải pháp</h3>
+                            <h3 class="widget-title">Danh mục</h3>
                             <ul class="nav service-menu">
-                                <li><a href="#">Cửa kính cường lực</a></li>
-{{--                                <li class="active"><a href="service-single.html">Vách kính</a></li>--}}
-                                <li><a href="#">Vách kính</a></li>
-                                <li><a href="#">Lan can kính</a></li>
-                                <li><a href="#">Cầu thang kính</a></li>
-                                <li><a href="#">Cabin tắm</a></li>
+                                @foreach($lstCate as $cate)
+                                    <li><a href="/list-products?cateId={!! $cate->id !!}">{!! $cate->name !!}</a></li>
+                                @endforeach
                             </ul>
                         </div><!-- Widget end -->
 

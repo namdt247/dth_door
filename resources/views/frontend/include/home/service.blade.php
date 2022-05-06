@@ -15,28 +15,28 @@
                         <img loading="lazy" src="/frontend/images/icon-image/service-icon1.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="javascript:void(0)">Thiết kế</a></h3>
-                        <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Khảo sát</a></h3>
+                        <p>DTH đặt lịch hẹn đến khảo sát thực tế công trình của khách hàng</p>
                     </div>
                 </div><!-- Service 1 end -->
 
                 <div class="ts-service-box d-flex">
                     <div class="ts-service-box-img">
-                        <img loading="lazy" src="/frontend/images/icon-image/service-icon2.png" alt="service-icon">
+                        <img loading="lazy" src="/frontend/images/icon-image/service-icon4.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
-                        <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Báo giá</a></h3>
+                        <p>Lên bản vẽ thiết kế, báo giá thi công chi tiết tốt nhất cho khách hàng</p>
                     </div>
                 </div><!-- Service 2 end -->
 
                 <div class="ts-service-box d-flex">
                     <div class="ts-service-box-img">
-                        <img loading="lazy" src="/frontend/images/icon-image/service-icon3.png" alt="service-icon">
+                        <img loading="lazy" src="/frontend/images/icon-image/service-icon6.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
-                        <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Bàn giao</a></h3>
+                        <p>Khách hàng và DTH nghiệm thu từng hạng mục công trình theo hợp đồng</p>
                     </div>
                 </div><!-- Service 3 end -->
 
@@ -50,11 +50,11 @@
             <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
                 <div class="ts-service-box d-flex">
                     <div class="ts-service-box-img">
-                        <img loading="lazy" src="/frontend/images/icon-image/service-icon4.png" alt="service-icon">
+                        <img loading="lazy" src="/frontend/images/icon-image/service-icon3.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
-                        <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Thiết kế</a></h3>
+                        <p>Lên ý tưởng thiết kế theo mong muốn của khách hàng</p>
                     </div>
                 </div><!-- Service 4 end -->
 
@@ -63,18 +63,18 @@
                         <img loading="lazy" src="/frontend/images/icon-image/service-icon5.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
-                        <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Thi công</a></h3>
+                        <p>Đôi ngũ thi công nhanh chóng, đảm bảo tiến độ và chất lượng</p>
                     </div>
                 </div><!-- Service 5 end -->
 
                 <div class="ts-service-box d-flex">
                     <div class="ts-service-box-img">
-                        <img loading="lazy" src="/frontend/images/icon-image/service-icon6.png" alt="service-icon">
+                        <img loading="lazy" src="/frontend/images/icon-image/service-icon2.png" alt="service-icon">
                     </div>
                     <div class="ts-service-box-info">
-                        <h3 class="service-box-title"><a href="#">Thiết kế</a></h3>
-                        <p>Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng</p>
+                        <h3 class="service-box-title"><a href="javascript:void(0)">Bảo trì</a></h3>
+                        <p>Đảm bảo công trình của khách hàng bền đẹp theo năm tháng</p>
                     </div>
                 </div><!-- Service 6 end -->
             </div><!-- Col end -->

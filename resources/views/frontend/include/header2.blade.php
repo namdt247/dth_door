@@ -6,7 +6,7 @@
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
                         <div class="logo">
                             <a class="d-block" href="/">
-                                <img loading="lazy" src="/frontend/images/logo_dth_4.png" alt="DTH">
+                                <img loading="lazy" src="/frontend/images/logo_dth_6.png" alt="DTH">
                             </a>
                         </div><!-- logo end -->
 
@@ -28,10 +28,14 @@
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a href="/list-products" class="nav-link">
-                                        Sản phẩm
-                                    </a>
+                                <?php $lstCate = \App\Models\Category::where('status', '!=', \App\Helper\Config::STATUS_DELETED)->orderby('created_at', 'desc')->get() ?>
+                                <li class="nav-item dropdown">
+                                    <a href="/list-cate" class="nav-link dropdown-toggle" data-toggle="dropdown">Sản phẩm <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        @foreach($lstCate as $cate)
+                                            <li><a href="/list-products?cateId={!! $cate->id !!}">{!! $cate->name !!}</a></li>
+                                        @endforeach
+                                    </ul>
                                 </li>
 
                                 <li class="nav-item">

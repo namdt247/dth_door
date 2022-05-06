@@ -21,8 +21,19 @@ class CategorySeeder extends Seeder
         \Illuminate\Support\Facades\DB::table('categories')->insert([
             [
                 'id' => 1,
-                'name' => 'Danh mục chung',
-                'note' => 'Danh mục sản phẩm chung',
+                'name' => 'Nhôm',
+                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'id' => 2,
+                'name' => 'Phụ kiện cửa nhôm',
+                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'id' => 3,
+                'name' => 'Phụ kiện cửa kính',
                 'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
             ],

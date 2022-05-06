@@ -151,7 +151,7 @@
                         <div class="item">
                             <div class="ts-team-wrapper">
                                 <div class="team-img-wrapper">
-                                    <img loading="lazy" class="w-100" src="/frontend/images/team/team1.jpg" alt="team-img">
+                                    <img loading="lazy" class="w-100" src="/frontend/images/team-member/team-member-03.jpg" alt="team-img">
                                 </div>
                                 <div class="ts-team-content">
                                     <h3 class="ts-name">Mr. Thuỷ</h3>
@@ -164,11 +164,11 @@
                         <div class="item">
                             <div class="ts-team-wrapper">
                                 <div class="team-img-wrapper">
-                                    <img loading="lazy" class="w-100" src="/frontend/images/team/team2.jpg" alt="team-img">
+                                    <img loading="lazy" class="w-100" src="/frontend/images/team-member/team-member-01.jpg" alt="team-img">
                                 </div>
                                 <div class="ts-team-content">
                                     <h3 class="ts-name">Mr. Đông</h3>
-                                    <p class="ts-designation">PGD. Kỹ thuật</p>
+                                    <p class="ts-designation">PGD. Vận hành</p>
                                     <p class="ts-description">DTH Door luôn đổi mới sáng tạo trong từng công trình</p>
                                 </div>
                             </div><!--/ Team wrapper end -->
@@ -177,28 +177,15 @@
                         <div class="item">
                             <div class="ts-team-wrapper">
                                 <div class="team-img-wrapper">
-                                    <img loading="lazy" class="w-100" src="/frontend/images/team/team3.jpg" alt="team-img">
+                                    <img loading="lazy" class="w-100" src="/frontend/images/team-member/team-member-02.jpg" alt="team-img">
                                 </div>
                                 <div class="ts-team-content">
                                     <h3 class="ts-name">Mr. Hùng</h3>
-                                    <p class="ts-designation">PGĐ. Vận hành</p>
+                                    <p class="ts-designation">PGĐ. Kỹ thuật</p>
                                     <p class="ts-description">DTH Door dịch vụ tuyệt vời làm hài lòng mọi khách hàng</p>
                                 </div>
                             </div><!--/ Team wrapper end -->
                         </div><!-- Team 3 end -->
-
-                        <div class="item">
-                            <div class="ts-team-wrapper">
-                                <div class="team-img-wrapper">
-                                    <img loading="lazy" class="w-100" src="/frontend/images/team/team4.jpg" alt="team-img">
-                                </div>
-                                <div class="ts-team-content">
-                                    <h3 class="ts-name">Mrs. Anna</h3>
-                                    <p class="ts-designation">Kế toán</p>
-                                    <p class="ts-description">DTH Door giá cả cạnh tranh cho mọi công trình</p>
-                                </div>
-                            </div><!--/ Team wrapper end -->
-                        </div><!-- Team 4 end -->
                     </div><!-- Team slide end -->
                 </div>
             </div><!--/ Content row end -->
