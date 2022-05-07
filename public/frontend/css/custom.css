@@ -145,6 +145,10 @@
     .slick-next:before {
         font-size: 23px;
     }
+
+    ul.top-info li i {
+        margin-right: 0;
+    }
 }
 
 
