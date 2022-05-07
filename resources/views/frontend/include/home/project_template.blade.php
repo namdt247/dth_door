@@ -9,7 +9,7 @@
         <!--/ Title row end -->
 
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-6 mb-4">
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="javascript:void(0)" class="latest-post-img">
@@ -34,7 +34,7 @@
                 </div><!-- Latest post end -->
             </div><!-- 1st post col end -->
 
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-6 mb-4">
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="javascript:void(0)" class="latest-post-img">
@@ -58,7 +58,7 @@
                 </div><!-- Latest post end -->
             </div><!-- 2nd post col end -->
 
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-6 mb-4">
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="javascript:void(0)" class="latest-post-img">
