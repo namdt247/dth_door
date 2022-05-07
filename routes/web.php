@@ -27,6 +27,9 @@ Route::get('/contact', [UserController::class, 'contact'])
 Route::post('/contact', [UserController::class, 'postContact'])
     ->name('user.postContact');
 
+Route::get('/list-cate', [ProductController::class, 'getListCate'])
+    ->name('user.listCate');
+
 Route::get('/list-products', [ProductController::class, 'getListProduct'])
     ->name('user.listProduct');
 

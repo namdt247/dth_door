@@ -62,7 +62,7 @@
                     @endforeach
                     <div class="col-12">
                         <div class="general-btn text-center m-btn-mobile">
-                            <a class="btn btn-primary" href="/list-products">Xem thêm</a>
+                            <a class="btn btn-primary" href="/list-cate">Xem thêm</a>
                         </div>
                     </div>
                 </div>

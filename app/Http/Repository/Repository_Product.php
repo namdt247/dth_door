@@ -13,6 +13,13 @@ class Repository_Product {
             ->paginate(Config::NUMBER_PER_PAGE_CUSTOMER);
     }
 
+    public function getListProductByCate2($cateId) {
+        return Product::where('category_id', '=', $cateId)
+            ->where('status', '!=', Config::STATUS_DELETED)
+            ->orderby('created_at', 'desc')
+            ->get();
+    }
+
     public function getListProductNotIn($cateId, $prdId) {
         return Product::where('category_id', '=', $cateId)
             ->whereNotIn('id', [$prdId])

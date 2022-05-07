@@ -31,4 +31,9 @@ class ProductController extends Controller
         $lstCate = $this->cateService->getListCate();
         return view('frontend.products.detail_product', compact('product', 'lstProductNotIn', 'lstCate'));
     }
+
+    public function getListCate() {
+        $lstCate = $this->cateService->getListCate();
+        return view('frontend.products.list_cate', compact('lstCate'));
+    }
 }
