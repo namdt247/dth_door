@@ -101,11 +101,3 @@
     </div>
     <!--/ Navigation end -->
 </header>
-
-@section('main-script')
-    <script>
-        function redirectListCate() {
-            window.location.href = '/list-cate';
-        }
-    </script>
-@endsection

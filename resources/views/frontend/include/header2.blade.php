@@ -30,8 +30,9 @@
 
                                 <?php $lstCate = \App\Models\Category::where('status', '!=', \App\Helper\Config::STATUS_DELETED)->orderby('created_at', 'desc')->get() ?>
                                 <li class="nav-item dropdown">
-                                    <a href="/list-cate" class="nav-link dropdown-toggle" data-toggle="dropdown" onclick="redirectListCate()">
-                                        Sản phẩm <i class="fa fa-angle-down"></i>
+                                    <a href="/list-cate" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                        <span onclick="redirectListCate()">Sản phẩm </span>
+                                        <i class="fa fa-angle-down"></i>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
                                         @foreach($lstCate as $cate)
@@ -58,11 +59,3 @@
     </div>
     <!--/ Navigation end -->
 </header>
-
-@section('main-script')
-    <script>
-        function redirectListCate() {
-            window.location.href = '/list-cate';
-        }
-    </script>
-@endsection
