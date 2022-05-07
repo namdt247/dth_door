@@ -61,7 +61,7 @@
     }
 
     .image-product {
-        height: 350px;
+        height: 150px;
     }
 
     .row1 {
@@ -74,9 +74,18 @@
     .img-fluid1 {
         display: none;
     }
-   .banner-area {
-       display: none;
-   }
+
+    section, .section-padding {
+        padding: 50px 0;
+    }
+
+    .banner-area {
+        min-height: 180px;
+    }
+
+    .image-product-slide {
+        height: 300px;
+    }
 
    .ts-team {
        margin-top: -100px;

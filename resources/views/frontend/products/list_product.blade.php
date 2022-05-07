@@ -28,7 +28,7 @@
             <div class="row">
                 @if(!empty($lstProduct) && $lstProduct->count())
                     @foreach($lstProduct as $prd)
-                        <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="col-lg-4 col-md-6 col-6 mb-5">
                             <div class="ts-service-box">
                                 <div class="ts-service-image-wrapper custom-ts-service-image-wrapper">
                                     <a href="{!! route('user.detailProduct', $prd->id) !!}">

@@ -3,7 +3,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <h2 class="section-title">Dịch vụ của chúng tôi</h2>
-                <h3 class="section-sub-title">Các dịch vụ</h3>
+                <h3 class="section-sub-title mt-5 mt-md-0">Các dịch vụ</h3>
             </div>
         </div>
         <!--/ Title row end -->
@@ -42,7 +42,7 @@
 
             </div><!-- Col end -->
 
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-4 text-center d-none d-md-block">
                 <img loading="lazy" class="img-fluid" src="/frontend/images/services/service-center.jpg"
                      alt="service-avater-image">
             </div><!-- Col end -->

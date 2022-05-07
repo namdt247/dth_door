@@ -84,23 +84,25 @@
 
                             <div class="gap-20"></div>
 
-                            <div class="row">
-                                <?php
-                                    $count = 0;
-                                ?>
-                                @while($count < 3)
-                                    @foreach($product->large_photos as $image)
-                                        @if($count < 3)
-                                            <div class="col-md-4 row2">
-                                                <div class="item image-product-detail" style="background-image:url({{ $image }})">
+                            <div class="d-none d-md-block">
+                                <div class="row">
+                                    <?php
+                                        $count = 0;
+                                    ?>
+                                    @while($count < 3)
+                                        @foreach($product->large_photos as $image)
+                                            @if($count < 3)
+                                                <div class="col-md-4 row2">
+                                                    <div class="item image-product-detail" style="background-image:url({{ $image }})">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        @endif
-                                        <?php
-                                            $count++;
-                                        ?>
-                                    @endforeach
-                                @endwhile
+                                            @endif
+                                            <?php
+                                                $count++;
+                                            ?>
+                                        @endforeach
+                                    @endwhile
+                                </div>
                             </div>
                         @endif
 
@@ -131,7 +133,7 @@
             @if(!empty($lstProductNotIn) && $lstProductNotIn->count())
                 <div class="row">
                     @foreach($lstProductNotIn as $prd)
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 col-6">
                             <div class="ts-service-box">
                                 <div class="ts-service-image-wrapper custom-ts-service-image-wrapper">
                                     <a href="{!! route('user.detailProduct', $prd->id) !!}">
