@@ -9,7 +9,7 @@ class AdminController extends Controller
 {
     public function home()
     {
-        return 'home';
+        return view('admin.dashboard');
     }
 
     public function login()

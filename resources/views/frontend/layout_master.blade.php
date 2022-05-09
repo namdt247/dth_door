@@ -9,6 +9,21 @@
         @yield('title')
     </title>
 
+    <script type="application/ld+json">
+      {
+        "name": "DTHDoor Tech",
+        "description": "Giải pháp nhôm kính thông minh",
+        "author":
+        {
+          "@type": "Person",
+          "name": "DTHDoor"
+        },
+        "@type": "WebSite",
+        "url": "",
+        "headline": "",
+      }
+    </script><!-- End SEO tag -->
+
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
