@@ -27,7 +27,7 @@
         <div class="container">
             @if(!empty($lstCate) && $lstCate->count())
                 @foreach($lstCate as $cate)
-                    <?php $lstPrd = $cate->lstProduct; ?>
+                    <?php $lstPrd = $cate->product; ?>
                     <h4 class="text-danger title-cate pb-1 mb-4">
                         {!! $cate->name !!}
                         <button class="slick-next slick-arrow" aria-label="Next" type="button" style="" aria-disabled="false">Next</button>

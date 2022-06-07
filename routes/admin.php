@@ -17,5 +17,9 @@ use App\Http\Controllers\Admin\AdminController;
 Route::get('/admin/login', [AdminController::class, 'login'])
     ->name('admin.login');
 
+Route::post('/admin/login', [AdminController::class, 'postLogin']);
+
 Route::get('/admin/dashboard', [AdminController::class, 'home'])
-    ->name('admin.home');
+    ->name('admin.home')
+    ->middleware('user')
+    ->middleware(['middleware' => 'role_or_permission:supper-admin|admin|editor']);
