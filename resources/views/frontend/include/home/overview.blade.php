@@ -1,4 +1,4 @@
-<section id="facts" class="facts-area dark-bg">
+<section id="facts" class="facts-area dark-bg row1">
     <div class="container">
         <div class="facts-wrapper">
             <div class="row">

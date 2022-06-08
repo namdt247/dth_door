@@ -46,8 +46,7 @@
                 <img loading="lazy" class="img-fluid" src="/frontend/images/services/service-center.jpg"
                      alt="service-avater-image">
             </div><!-- Col end -->
-
-            <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
+            <div class="col-lg-4 md-0 mt-md-5 mb-4 mb-lg-0">
                 <div class="ts-service-box d-flex">
                     <div class="ts-service-box-img">
                         <img loading="lazy" src="/frontend/images/icon-image/service-icon3.png" alt="service-icon">
