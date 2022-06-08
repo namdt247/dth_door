@@ -1,5 +1,9 @@
 @extends('frontend.layout_master')
 
+@section('header-css')
+    <link rel="stylesheet" href="/frontend/plugins/fancy-box/jquery.fancybox.min.css">
+@endsection
+
 @section('content')
     <!-- Banner -->
     <div id="banner-area" class="banner-area" style="background-image:url(/frontend/images/banner/banner1.jpg)">
@@ -30,14 +34,11 @@
                 <div class="col-xl-3 col-lg-4 row1">
                     <div class="sidebar sidebar-left">
                         <div class="widget">
-                            <h3 class="widget-title">Giải pháp</h3>
+                            <h3 class="widget-title">Danh mục</h3>
                             <ul class="nav service-menu">
-                                <li><a href="#">Cửa kính cường lực</a></li>
-{{--                                <li class="active"><a href="service-single.html">Vách kính</a></li>--}}
-                                <li><a href="#">Vách kính</a></li>
-                                <li><a href="#">Lan can kính</a></li>
-                                <li><a href="#">Cầu thang kính</a></li>
-                                <li><a href="#">Cabin tắm</a></li>
+                                @foreach($lstCate as $cate)
+                                    <li><a href="/list-products?cateId={!! $cate->id !!}">{!! $cate->name !!}</a></li>
+                                @endforeach
                             </ul>
                         </div><!-- Widget end -->
 
@@ -48,7 +49,6 @@
                                 </div>
 
                                 <div class="quote-item-footer">
-{{--                                    <img loading="lazy" class="testimonial-thumb" src="/frontend/images/clients/testimonial1.png" alt="testimonial">--}}
                                     <div class="quote-item-info">
                                         <h3 class="quote-author">Mr. Thuỷ</h3>
                                         <span class="quote-subtext">CEO, DTH Door</span>
@@ -74,36 +74,48 @@
 
                         <div class="gap-20"></div>
 
+                        <!-- Slider images -->
                         @if(!empty($product->large_photos) && count($product->large_photos) > 0)
-                            <div id="page-slider" class="page-slider">
+                            <div class="slider-for mb-3">
                                 @foreach($product->large_photos as $image)
-                                    <div class="item image-product-slide" style="background-image:url({{ $image }})">
+                                    <div class="slider-item image-product-slide" style="background-image:url({{ $image }})">
                                     </div>
                                 @endforeach
-    {{--                            <div class="item">--}}
-    {{--                                <img loading="lazy" class="img-fluid" src="/frontend/images/projects/project1.jpg" alt="project-slider-image" />--}}
-    {{--                            </div>--}}
-                            </div><!-- Slider end -->
+                            </div>
+                            <div class="px-3 px-md-0">
+                                <div class="slider-nav">
+                                    @foreach($product->large_photos as $image)
+                                        <div class="slider-item image-product-slide-small m-2" style="background-image:url({{ $image }})">
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
 
                             <div class="gap-20"></div>
 
-                            <div class="row">
+                            <div class="text-center">
                                 <?php
                                     $count = 0;
                                 ?>
-                                @while($count < 3)
-                                    @foreach($product->large_photos as $image)
-                                        @if($count < 3)
-                                            <div class="col-md-4 row2">
-                                                <div class="item image-product-detail" style="background-image:url({{ $image }})">
-                                                </div>
-                                            </div>
-                                        @endif
-                                        <?php
-                                            $count++;
-                                        ?>
-                                    @endforeach
-                                @endwhile
+                                @foreach($product->large_photos as $image)
+                                    @if($count < 1)
+                                        <a href="{!! $image !!}" data-fancybox="gallery" class="btn-show-fancy">
+                                            <img src="{!! $image !!}" alt="products" class="d-none">
+                                            <span>
+                                                Xem chi tiết {!! count($product->large_photos) !!} ảnh
+                                                <i class="fas fa-image ml-1"></i>
+                                            </span>
+                                        </a>
+                                    @else
+                                        <a href="{!! $image !!}" data-fancybox="gallery" class="d-none">
+                                            <img src="{!! $image !!}" alt="products">
+                                        </a>
+                                    @endif
+
+                                    <?php
+                                        $count++;
+                                    ?>
+                                @endforeach
                             </div>
                         @endif
 
@@ -122,8 +134,6 @@
 
                     </div><!-- Content inner end -->
                 </div><!-- Content Col end -->
-
-
             </div><!-- Main row end -->
 
             <div class="gap-40"></div>
@@ -134,13 +144,12 @@
             @if(!empty($lstProductNotIn) && $lstProductNotIn->count())
                 <div class="row">
                     @foreach($lstProductNotIn as $prd)
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 col-6">
                             <div class="ts-service-box">
                                 <div class="ts-service-image-wrapper custom-ts-service-image-wrapper">
                                     <a href="{!! route('user.detailProduct', $prd->id) !!}">
                                         <div class="image-product" style="background-image:url({{$prd->large_photo}})">
                                         </div>
-                                        {{--                                    <img loading="lazy" class="w-100" src="{{ $prd->large_photo }}" alt="product" style="height: 300px">--}}
                                     </a>
                                 </div>
                                 <div class="d-flex">
@@ -166,4 +175,36 @@
             @endif
         </div><!-- Conatiner end -->
     </section>
+@endsection
+
+@section('main-script')
+    <script src="/frontend/plugins/fancy-box/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: false,
+                centerMode: true,
+                focusOnSelect: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    },
+                ]
+            });
+        });
+    </script>
 @endsection

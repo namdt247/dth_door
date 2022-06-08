@@ -6,14 +6,23 @@ use App\Helper\Config;
 use App\Models\Product;
 
 class Repository_Product {
-    public function getListProduct() {
-        return Product::where('status', '!=', Config::STATUS_DELETED)
+    public function getListProductByCate($cateId) {
+        return Product::where('category_id', '=', $cateId)
+            ->where('status', '!=', Config::STATUS_DELETED)
             ->orderby('created_at', 'desc')
             ->paginate(Config::NUMBER_PER_PAGE_CUSTOMER);
     }
 
-    public function getListProductNotIn($prdId) {
-        return Product::whereNotIn('id', [$prdId])
+    public function getListProductByCate2($cateId) {
+        return Product::where('category_id', '=', $cateId)
+            ->where('status', '!=', Config::STATUS_DELETED)
+            ->orderby('created_at', 'desc')
+            ->get();
+    }
+
+    public function getListProductNotIn($cateId, $prdId) {
+        return Product::where('category_id', '=', $cateId)
+            ->whereNotIn('id', [$prdId])
             ->where('status', '!=', Config::STATUS_DELETED)
             ->orderby('created_at', 'desc')
             ->take(3)
@@ -21,7 +30,8 @@ class Repository_Product {
     }
 
     public function getListProductNewest() {
-        return Product::where('status', '!=', Config::STATUS_DELETED)
+        return Product::where('category_id', '=', 1)
+            ->where('status', '!=', Config::STATUS_DELETED)
             ->orderby('created_at', 'desc')
             ->take(3)
             ->get();

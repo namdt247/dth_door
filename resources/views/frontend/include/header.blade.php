@@ -5,7 +5,7 @@
                 <div class="row align-items-center">
                     <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
                         <a class="d-block" href="/">
-                            <img loading="lazy" src="/frontend/images/logo_dth_2.png" alt="dth" class="logo-homepage">
+                            <img loading="lazy" src="/frontend/images/logo_dth_6.png" alt="dth">
                         </a>
                     </div><!-- logo end -->
 
@@ -35,14 +35,6 @@
                                     </div>
                                 </div>
                             </li>
-                            {{--                                <li class="last">--}}
-                            {{--                                    <div class="info-box last">--}}
-                            {{--                                        <div class="info-box-content">--}}
-                            {{--                                            <p class="info-box-title">Global Certificate</p>--}}
-                            {{--                                            <p class="info-box-subtitle">ISO 9001:2017</p>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </li>--}}
                             <li class="header-get-a-quote">
                                 <a class="btn btn-primary" href="/contact">Liên hệ ngay</a>
                             </li>
@@ -79,10 +71,16 @@
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a href="/list-products" class="nav-link">
-                                        Sản phẩm
+                                <?php $lstCate = \App\Models\Category::where('status', '!=', \App\Helper\Config::STATUS_DELETED)->orderby('created_at', 'desc')->get() ?>
+                                <li class="nav-item dropdown">
+                                    <a href="/list-cate" class="nav-link dropdown-toggle" data-toggle="dropdown" onclick="redirectListCate()">
+                                        Sản phẩm <i class="fa fa-angle-down"></i>
                                     </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        @foreach($lstCate as $cate)
+                                            <li><a href="/list-products?cateId={!! $cate->id !!}">{!! $cate->name !!}</a></li>
+                                        @endforeach
+                                    </ul>
                                 </li>
 
                                 <li class="nav-item">
@@ -97,18 +95,6 @@
                 <!--/ Col end -->
             </div>
             <!--/ Row end -->
-
-            {{--                <div class="nav-search">--}}
-            {{--                    <span id="search"><i class="fa fa-search"></i></span>--}}
-            {{--                </div><!-- Search end -->--}}
-
-            {{--                <div class="search-block" style="display: none;">--}}
-            {{--                    <label for="search-field" class="w-100 mb-0">--}}
-            {{--                        <input type="text" class="form-control" id="search-field"--}}
-            {{--                               placeholder="Type what you want and enter">--}}
-            {{--                    </label>--}}
-            {{--                    <span class="search-close">&times;</span>--}}
-            {{--                </div><!-- Site search end -->--}}
         </div>
         <!--/ Container end -->
 

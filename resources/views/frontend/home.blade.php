@@ -31,7 +31,7 @@
 
                 <div class="row">
                     @foreach($lstProductNewest as $prd)
-                        <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="col-lg-4 col-md-6 col-6 mb-4">
                             <div class="latest-post">
                                 <div class="latest-post-media">
 {{--                                    <a href="{!! route('user.detailProduct', $prd->id) !!}" class="latest-post-img">--}}
@@ -61,8 +61,8 @@
                         </div><!-- 1st post col end -->
                     @endforeach
                     <div class="col-12">
-                        <div class="general-btn text-center">
-                            <a class="btn btn-primary" href="/list-products">Xem thêm</a>
+                        <div class="general-btn text-center m-btn-mobile">
+                            <a class="btn btn-primary" href="/list-cate">Xem thêm</a>
                         </div>
                     </div>
                 </div>

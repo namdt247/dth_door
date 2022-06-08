@@ -28,13 +28,12 @@
             <div class="row">
                 @if(!empty($lstProduct) && $lstProduct->count())
                     @foreach($lstProduct as $prd)
-                        <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="col-lg-4 col-md-6 col-6 mb-5">
                             <div class="ts-service-box">
                                 <div class="ts-service-image-wrapper custom-ts-service-image-wrapper">
                                     <a href="{!! route('user.detailProduct', $prd->id) !!}">
                                         <div class="image-product" style="background-image:url({{$prd->large_photo}})">
                                         </div>
-    {{--                                    <img loading="lazy" class="w-100" src="{{ $prd->large_photo }}" alt="product" style="height: 300px">--}}
                                     </a>
                                 </div>
                                 <div class="d-flex">
@@ -49,7 +48,6 @@
                                         <h3 class="service-box-title mt-2 mb-0">
                                             <a href="{!! route('user.detailProduct', $prd->id) !!}">{!! $prd->name !!}</a>
                                         </h3>
-    {{--                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>--}}
                                         <a class="learn-more d-inline-block custom-view-detail" href="{!! route('user.detailProduct', $prd->id) !!}" aria-label="service-details">
                                             <i class="fa fa-caret-right"></i> Chi tiết</a>
                                     </div>

@@ -1,5 +1,5 @@
 .logo-area-custom {
-    padding: 12px 0 !important;
+    padding: 24px 0 !important;
 }
 
 .logo-homepage {
@@ -26,16 +26,58 @@
 .image-product {
     background-size: cover;
     height: 300px;
+    border: 1px solid #f5f1f1;
 }
 
 .image-product-slide {
     background-size: cover;
     height: 500px;
+    border: 1px solid #f5f1f1;
+}
+
+.image-product-slide-small {
+    background-size: cover;
+    height: 120px;
+    border: 2px solid #ffb600;
+    cursor: pointer;
+}
+
+.image-product-slider {
+    background-size: cover;
+    height: 250px;
+    border: 1px solid #f5f1f1;
 }
 
 .image-product-detail {
     background-size: cover;
     height: 150px;
+}
+
+.title-cate {
+    border-bottom: 1px solid gray;
+}
+
+.clients-logo img {
+    -webkit-filter: none !important;
+    filter: none !important;
+}
+
+.highlight-project {
+    height: 300px;
+    background-size: cover;
+    border: 1px solid #f5f1f1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #ffb600;
+}
+
+.btn-show-fancy {
+    padding: 6px 35px;
+    color: #ffb600;
+    border: 1px solid #ffb600;
+    border-radius: 6px;
 }
 
 /* Style mobile */
@@ -49,7 +91,7 @@
     }
 
     .image-product {
-        height: 350px;
+        height: 150px;
     }
 
     .row1 {
@@ -63,11 +105,49 @@
         display: none;
     }
 
-   .ts-team {
-       margin-top: -100px;
-   }
+    section, .section-padding {
+        padding: 50px 0;
+    }
+
+    .banner-area {
+        min-height: 180px;
+    }
+
+    .image-product-slide {
+        height: 300px;
+    }
+
+    .image-product-slider {
+        height: 150px;
+    }
+
+    .highlight-project {
+        height: 150px;
+    }
+
+    .m-btn-mobile {
+        margin-top: 30px !important;
+    }
+
+    .ts-team {
+        margin-top: -100px;
+    }
+
     .row2{
       margin: 20px;
+    }
+
+    .image-product-slide-small {
+        height: 80px;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 23px;
+    }
+
+    ul.top-info li i {
+        margin-right: 0;
     }
 }
 

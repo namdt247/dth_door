@@ -76,42 +76,42 @@
                 <div class="row all-clients">
                     <div class="col-sm-4 col-6">
                         <figure class="clients-logo">
-                            <a href="#"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client1.png"
+                            <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="/frontend/images/partner/partner-01.jpg"
                                              alt="clients-logo"/></a>
                         </figure>
                     </div><!-- Client 1 end -->
 
                     <div class="col-sm-4 col-6">
                         <figure class="clients-logo">
-                            <a href="#"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client2.png"
-                                             alt="clients-logo"/></a>
+                            <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="/frontend/images/partner/partner-02.jpg"
+                                                              alt="clients-logo"/></a>
                         </figure>
                     </div><!-- Client 2 end -->
 
                     <div class="col-sm-4 col-6">
                         <figure class="clients-logo">
-                            <a href="#"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client3.png"
+                            <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="/frontend/images/partner/partner-03.jpg"
                                              alt="clients-logo"/></a>
                         </figure>
                     </div><!-- Client 3 end -->
 
                     <div class="col-sm-4 col-6">
                         <figure class="clients-logo">
-                            <a href="#"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client4.png"
+                            <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="/frontend/images/partner/partner-04.jpg"
                                              alt="clients-logo"/></a>
                         </figure>
                     </div><!-- Client 4 end -->
 
                     <div class="col-sm-4 col-6">
                         <figure class="clients-logo">
-                            <a href="#"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client5.png"
+                            <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="/frontend/images/partner/partner-05.png"
                                              alt="clients-logo"/></a>
                         </figure>
                     </div><!-- Client 5 end -->
 
                     <div class="col-sm-4 col-6">
                         <figure class="clients-logo">
-                            <a href="#!"><img loading="lazy" class="img-fluid" src="/frontend/images/clients/client6.png"
+                            <a href="javascript:void(0)"><img loading="lazy" class="img-fluid" src="/frontend/images/partner/partner-06.png"
                                               alt="clients-logo"/></a>
                         </figure>
                     </div><!-- Client 6 end -->

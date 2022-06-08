@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Service\Frontend\CategoryService;
 use App\Http\Service\Frontend\ContactService;
 use App\Http\Service\Frontend\HomeService;
 use Illuminate\Http\Request;

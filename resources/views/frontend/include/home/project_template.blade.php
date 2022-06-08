@@ -9,61 +9,74 @@
         <!--/ Title row end -->
 
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-6 mb-4">
                 <div class="latest-post">
                     <div class="latest-post-media">
-                        <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="/frontend/images/news/news1.jpg" alt="img">
+                        <a href="javascript:void(0)" class="latest-post-img">
+                            <div class="highlight-project" style="background-image: url(/frontend/images/highlight-project/highlight-project-01.jpg)">
+                            </div>
+{{--                            <img loading="lazy" class="img-fluid" src="/frontend/images/highlight-project/highlight-project-01.jpg" alt="img">--}}
                         </a>
                     </div>
                     <div class="post-body">
                         <h4 class="post-title">
-                            <a href="#" class="d-inline-block">Hà Đông</a>
+                            Mr. Lâm - Bắc Ninh
                         </h4>
                         <div class="latest-post-meta">
-                                <span class="post-item-date">
-                                    <i class="fa fa-clock-o"></i> July 20, 2021
-                                </span>
+                            <span class="post-item-date">
+                                <i class="fa fa-clock-o"></i> June 20,
+                                <script>
+                                    document.write(new Date().getFullYear() - 1)
+                                </script>
+                            </span>
                         </div>
                     </div>
                 </div><!-- Latest post end -->
             </div><!-- 1st post col end -->
 
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-6 mb-4">
                 <div class="latest-post">
                     <div class="latest-post-media">
-                        <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="/frontend/images/news/news2.jpg" alt="img">
+                        <a href="javascript:void(0)" class="latest-post-img">
+                            <div class="highlight-project" style="background-image: url(/frontend/images/highlight-project/highlight-project-02.jpg)">
+                            </div>
                         </a>
                     </div>
                     <div class="post-body">
                         <h4 class="post-title">
-                            <a href="#" class="d-inline-block">Hà Đông</a>
+                            Mrs. Trúc - Vĩnh Phúc
                         </h4>
                         <div class="latest-post-meta">
-                                <span class="post-item-date">
-                                  <i class="fa fa-clock-o"></i> June 17, 2021
-                                </span>
+                            <span class="post-item-date">
+                                <i class="fa fa-clock-o"></i> Aug 17,
+                                <script>
+                                    document.write(new Date().getFullYear() - 1)
+                                </script>
+                            </span>
                         </div>
                     </div>
                 </div><!-- Latest post end -->
             </div><!-- 2nd post col end -->
 
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 col-6 mb-4">
                 <div class="latest-post">
                     <div class="latest-post-media">
-                        <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="/frontend/images/news/news3.jpg" alt="img">
+                        <a href="javascript:void(0)" class="latest-post-img">
+                            <div class="highlight-project" style="background-image: url(/frontend/images/highlight-project/highlight-project-03.jpg)">
+                            </div>
                         </a>
                     </div>
                     <div class="post-body">
                         <h4 class="post-title">
-                            <a href="#" class="d-inline-block">Hà Đông</a>
+                            Mr. Thắng - Hà Nội
                         </h4>
                         <div class="latest-post-meta">
-                                <span class="post-item-date">
-                                  <i class="fa fa-clock-o"></i> Aug 13, 2021
-                                </span>
+                            <span class="post-item-date">
+                                <i class="fa fa-clock-o"></i> Sep 13,
+                                <script>
+                                    document.write(new Date().getFullYear() - 1)
+                                </script>
+                            </span>
                         </div>
                     </div>
                 </div><!-- Latest post end -->
