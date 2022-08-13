@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +23,36 @@ Route::get('/admin/login', [AdminController::class, 'login'])
 
 Route::post('/admin/login', [AdminController::class, 'postLogin']);
 
-Route::get('/admin/dashboard', [AdminController::class, 'home'])
-    ->name('admin.home')
-    ->middleware('user')
-    ->middleware(['middleware' => 'role_or_permission:supper-admin|admin|editor']);
+Route::get('/admin/logout', [AdminController::class, 'logout']);
+
+Route::group([
+    'prefix' => 'admin',
+    'namespace' => 'Admin',
+    'middleware' => ['user','role_or_permission:supper-admin|admin|editor']
+], function() {
+    Route::get('/dashboard', [AdminController::class, 'home']);
+
+    # region user
+    Route::group(['prefix' => 'user'], function(){
+        Route::get('/list', [UserController::class, 'getListUser']);
+    });
+    # endregion
+
+    # region category
+    Route::group(['prefix' => 'cate'], function(){
+        Route::get('/list', [CategoryController::class, 'getListCategory']);
+    });
+    # endregion
+
+    # region product
+    Route::group(['prefix' => 'product'], function(){
+        Route::get('/list', [ProductController::class, 'getListProduct']);
+    });
+    # endregion
+
+    # region contact
+    Route::group(['prefix' => 'contact'], function(){
+        Route::get('/list', [ContactController::class, 'getListContact']);
+    });
+    # endregion
+});

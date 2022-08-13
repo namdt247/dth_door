@@ -1,0 +1,13 @@
+.main-content {
+    min-height: calc(100vh - 125px);
+}
+
+.header-company {
+    font-weight: 600;
+    color: #f7c46c;
+}
+
+.header-department {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+}

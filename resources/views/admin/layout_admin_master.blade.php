@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/admin/assets/stylesheets/theme.min.css" data-skin="default">
     <link rel="stylesheet" href="/admin/assets/stylesheets/theme-dark.min.css" data-skin="dark">
     <link rel="stylesheet" href="/admin/assets/stylesheets/custom.css">
+    <link rel="stylesheet" href="/admin/assets/stylesheets/style.css">
     <script>
         var skin = localStorage.getItem('skin') || 'default';
         var disabledSkinStylesheet = document.querySelector('link[data-skin]:not([data-skin="' + skin + '"])');
@@ -48,7 +49,9 @@
 
     <!-- .app-main -->
     <main class="app-main">
-        @yield('main-content')
+        <div class="main-content">
+            @yield('main-content')
+        </div>
 
         @include('admin.include.footer')
         <!-- /.wrapper -->

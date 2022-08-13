@@ -32,13 +32,10 @@
 
                     <!-- .menu-item -->
                     <li class="menu-item has-child">
-                        <a href="#" class="menu-link"><span class="menu-icon oi oi-person"></span> <span class="menu-text">Quản lý người dùng</span></a> <!-- child menu -->
+                        <a href="#" class="menu-link"><span class="menu-icon oi oi-person"></span> <span class="menu-text">Quản lý tài khoản</span></a> <!-- child menu -->
                         <ul class="menu">
                             <li class="menu-item">
-                                <a href="#" class="menu-link">Quản trị viên</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">Người dùng</a>
+                                <a href="/admin/user/list" class="menu-link">Tài khoản</a>
                             </li>
                         </ul><!-- /child menu -->
                     </li>
@@ -50,10 +47,13 @@
 
                     <!-- .menu-item -->
                     <li class="menu-item has-child">
-                        <a href="#" class="menu-link"><span class="menu-icon oi oi-browser"></span> <span class="menu-text">Danh mục sản phẩm</span></a> <!-- child menu -->
+                        <a href="#" class="menu-link">
+                            <span class="menu-icon fa fa-list-alt"></span>
+                            <span class="menu-text">Danh mục</span>
+                        </a> <!-- child menu -->
                         <ul class="menu">
                             <li class="menu-item">
-                                <a href="#" class="menu-link">Danh sách</a>
+                                <a href="/admin/cate/list" class="menu-link">Danh sách</a>
                             </li>
                             <li class="menu-item">
                                 <a href="#" class="menu-link">Thêm mới</a>
@@ -64,10 +64,10 @@
 
                     <!-- .menu-item -->
                     <li class="menu-item has-child">
-                        <a href="#" class="menu-link"><span class="menu-icon oi oi-browser"></span> <span class="menu-text">Sản phẩm</span></a> <!-- child menu -->
+                        <a href="#" class="menu-link"><span class="menu-icon fa fa-cube"></span> <span class="menu-text">Sản phẩm</span></a> <!-- child menu -->
                         <ul class="menu">
                             <li class="menu-item">
-                                <a href="#" class="menu-link">Danh sách</a>
+                                <a href="/admin/product/list" class="menu-link">Danh sách</a>
                             </li>
                             <li class="menu-item">
                                 <a href="#" class="menu-link">Thêm mới</a>
@@ -77,12 +77,15 @@
                     <!-- /.menu-item -->
 
                     <!-- .menu-header -->
-                    <li class="menu-header">Feedback</li>
+                    <li class="menu-header">Contact</li>
                     <!-- /.menu-header -->
 
                     <!-- .menu-item -->
                     <li class="menu-item">
-                        <a href="#" class="menu-link"><span class="menu-icon fas fa-rocket"></span> <span class="menu-text">Feedback</span></a>
+                        <a href="/admin/contact/list" class="menu-link">
+                            <span class="menu-icon fa fa-comments"></span>
+                            <span class="menu-text">Contact</span>
+                        </a>
                     </li>
                     <!-- /.menu-item -->
                 </ul><!-- /.menu -->

@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Sign In | Looper - Bootstrap 4 Admin Theme </title>
+    <title>DTHDoor - Admin</title>
     <meta property="og:title" content="Sign In">
     <meta name="author" content="Beni Arisandi">
     <meta property="og:locale" content="en_US">
@@ -14,21 +14,6 @@
 {{--    <link rel="canonical" href="index.htm">--}}
     <meta property="og:url" content="https://uselooper.com">
     <meta property="og:site_name" content="Looper - Bootstrap 4 Admin Theme">
-    <script type="application/ld+json">
-      {
-        "name": "Looper - Bootstrap 4 Admin Theme",
-        "description": "Responsive admin theme build on top of Bootstrap 4",
-        "author":
-        {
-          "@type": "Person",
-          "name": "Beni Arisandi"
-        },
-        "@type": "WebSite",
-        "url": "",
-        "headline": "Sign In",
-        "@context": "http://schema.org"
-      }
-    </script><!-- End SEO tag -->
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="144x144" href="assets/apple-touch-icon.png">
     <link rel="shortcut icon" href="assets/favicon.ico">
@@ -49,7 +34,6 @@
         // add loading class to html immediately
         document.querySelector('html').classList.add('loading');
     </script><!-- END THEME STYLES -->
-    <title>Document</title>
 </head>
 <body>
     <main class="auth">
@@ -65,20 +49,21 @@
                     </g>
                 </svg> <span class="sr-only">Sign In</span>
             </h1>
-            <p> Don't have a account? <a href='singup.blade.php'>Create One</a>
+            <p> Don't have a account? <a href='#'>Create One</a>
             </p>
         </header><!-- form -->
-        <form class="auth-form">
+        <form class="auth-form" method="post" action="/admin/login">
             <!-- .form-group -->
+            @csrf
             <div class="form-group">
                 <div class="form-label-group">
-                    <input type="text" id="inputUser" class="form-control" placeholder="Username" autofocus=""> <label for="inputUser">Username</label>
+                    <input type="text" name="user_name" class="form-control" placeholder="Username" autofocus> <label for="inputUser">Username</label>
                 </div>
             </div><!-- /.form-group -->
             <!-- .form-group -->
             <div class="form-group">
                 <div class="form-label-group">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password"> <label for="inputPassword">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Password"> <label for="inputPassword">Password</label>
                 </div>
             </div><!-- /.form-group -->
             <!-- .form-group -->
@@ -88,7 +73,7 @@
             <!-- .form-group -->
             <div class="form-group text-center">
                 <div class="custom-control custom-control-inline custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="remember-me"> <label class="custom-control-label" for="remember-me">Keep me sign in</label>
+                    <input type="checkbox" checked class="custom-control-input" id="remember-me"> <label class="custom-control-label" for="remember-me">Keep me sign in</label>
                 </div>
             </div><!-- /.form-group -->
             <!-- recovery links -->
@@ -97,7 +82,11 @@
             </div><!-- /recovery links -->
         </form><!-- /.auth-form -->
         <!-- copyright -->
-        <footer class="auth-footer"> © 2018 All Rights Reserved. <a href="#">Privacy</a> and <a href="#">Terms</a>
+        <footer class="auth-footer">©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            All Rights Reserved. <a href="#">Privacy</a> and <a href="#">Terms</a>
         </footer>
     </main>
     <!-- BEGIN BASE JS -->
@@ -120,7 +109,6 @@
     <!-- BEGIN THEME JS -->
     <script src="assets/javascript/theme.js"></script> <!-- END THEME JS -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-{{--    <script async="" src="gtag/js.js?id=UA-116692175-1"></script>--}}
     <script>
         const bntsubmit = document.
         window.dataLayer = window.dataLayer || [];
@@ -132,18 +120,5 @@
         gtag('js', new Date());
         gtag('config', 'UA-116692175-1');
     </script>
-
-{{--    <form method="post" action="">--}}
-{{--        @csrf--}}
-{{--        <div>--}}
-{{--            Username:--}}
-{{--            <input type="text" name="user_name" id="" />--}}
-{{--        </div>--}}
-{{--        <div>--}}
-{{--            Password:--}}
-{{--            <input type="text" name="password" />--}}
-{{--        </div>--}}
-{{--        <button>Login</button>--}}
-{{--    </form>--}}
 </body>
 </html>
