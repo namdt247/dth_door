@@ -10,7 +10,8 @@
     <meta name="description" content="DTHDoor - Trang quản trị hệ thống">
     <!-- FAVICONS -->
     <link rel="apple-touch-icon" sizes="144x144" href="/admin/assets/apple-touch-icon.png">
-    <link rel="shortcut icon" href="/admin/assets/favicon.ico">
+{{--    <link rel="shortcut icon" href="/admin/assets/favicon.ico">--}}
+    <link rel="icon" type="image/png" href="/frontend/images/logo_dth.jpg">
     <meta name="theme-color" content="#3063A0"><!-- End FAVICONS -->
     <!-- GOOGLE FONT -->
     <link href="css.css?family=Fira+Sans:400,500,600" rel="stylesheet"><!-- End GOOGLE FONT -->
@@ -50,6 +51,19 @@
     <!-- .app-main -->
     <main class="app-main">
         <div class="main-content">
+            @if( \Illuminate\Support\Facades\Session::has('message_success'))
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h5><i class="icon fas fa-check"></i> Thông báo!</h5>
+                    {{ \Illuminate\Support\Facades\Session::get('message_success') }}
+                </div>
+            @elseif( \Illuminate\Support\Facades\Session::has('message_error'))
+                <div class="alert alert-warning alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h5><i class="icon fas fa-exclamation-triangle"></i> Thông báo</h5>
+                    {{ \Illuminate\Support\Facades\Session::get('message_error') }}
+                </div>
+            @endif
             @yield('main-content')
         </div>
 

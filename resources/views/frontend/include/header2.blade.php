@@ -28,7 +28,7 @@
                                     </a>
                                 </li>
 
-                                <?php $lstCate = \App\Models\Category::where('status', '!=', \App\Helper\Config::STATUS_DELETED)->orderby('created_at', 'desc')->get() ?>
+                                <?php $lstCate = \App\Models\Category::where('status', '!=', \App\Helper\Config::STATUS_DELETED)->orderby('created_at', 'asc')->get() ?>
                                 <li class="nav-item dropdown">
                                     <a href="/list-cate" class="nav-link dropdown-toggle" data-toggle="dropdown">
                                         <span onclick="redirectListCate()">Sản phẩm </span>

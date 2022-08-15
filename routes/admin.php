@@ -40,7 +40,11 @@ Route::group([
 
     # region category
     Route::group(['prefix' => 'cate'], function(){
-        Route::get('/list', [CategoryController::class, 'getListCategory']);
+        Route::get('/list', [CategoryController::class, 'getListCatePagination']);
+        Route::get('/add', [CategoryController::class, 'getAddCate']);
+        Route::post('/add', [CategoryController::class, 'createCate']);
+        Route::get('/detail', [CategoryController::class, 'getDetailCate']);
+        Route::post('/detail', [CategoryController::class, 'updateCate']);
     });
     # endregion
 
@@ -53,6 +57,8 @@ Route::group([
     # region contact
     Route::group(['prefix' => 'contact'], function(){
         Route::get('/list', [ContactController::class, 'getListContact']);
+        Route::get('/detail', [ContactController::class, 'getDetailContact']);
+        Route::post('/detail', [ContactController::class, 'updateContact']);
     });
     # endregion
 });

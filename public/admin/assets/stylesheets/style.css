@@ -1,5 +1,5 @@
-.main-content {
-    min-height: calc(100vh - 125px);
+.page {
+    min-height: calc(100vh - 173px) !important;
 }
 
 .header-company {
@@ -10,4 +10,18 @@
 .header-department {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.7);
+}
+
+a.btn-outline-secondary {
+    color: #363642;
+    background: linear-gradient(180deg,#fff,#f6f7f9);
+    border-color: #d7dce5;
+    box-shadow: 0 1px 0 0 rgb(20 20 31 / 5%);
+}
+
+a.btn-outline-secondary:hover {
+    background: linear-gradient(180deg,#f6f7f9,#f6f7f9);
+    border-color: #d7dce5;
+    box-shadow: none;
+    color: #363642;
 }
