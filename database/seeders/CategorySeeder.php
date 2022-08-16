@@ -22,13 +22,13 @@ class CategorySeeder extends Seeder
             [
                 'id' => 1,
                 'name' => 'Nhôm',
-                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => \Illuminate\Support\Carbon::now()->addDays(-2)->format('Y-m-d H:i:s'),
                 'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'id' => 2,
                 'name' => 'Phụ kiện cửa nhôm',
-                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'created_at' => \Illuminate\Support\Carbon::now()->addDays(-1)->format('Y-m-d H:i:s'),
                 'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
             ],
             [

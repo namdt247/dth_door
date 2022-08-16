@@ -31,10 +31,9 @@ class Repository_Product {
     }
 
     public function getListProductNewest() {
-        return Product::where(Query::CATE_ID, Query::EQUAL, 1)
-            ->where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
+        return Product::where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
             ->orderby(Query::CREATED_AT, Query::ORDER_BY_DESC)
-            ->take(Config::TAKE_RECORD)
+            ->take(Config::TAKE_RECORD_NEWS)
             ->get();
     }
 

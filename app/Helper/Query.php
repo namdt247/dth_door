@@ -10,6 +10,7 @@ namespace App\Helper;
 class Query
 {
     const ORDER_BY_DESC = 'desc';
+    const ORDER_BY_ASC = 'asc';
 
     // common
     const ID = 'id';

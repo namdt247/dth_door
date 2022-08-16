@@ -9,7 +9,7 @@ use App\Models\Category;
 class Repository_Category {
     public function getListCateWithProduct() {
         return Category::where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
-            ->orderby(Query::CREATED_AT, Query::ORDER_BY_DESC)
+            ->orderby(Query::CREATED_AT, Query::ORDER_BY_ASC)
             ->with(Query::WITH_PRODUCT)
             ->get();
     }

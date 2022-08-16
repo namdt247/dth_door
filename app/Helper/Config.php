@@ -11,6 +11,7 @@ class Config {
     const NUMBER_PER_PAGE_ADMIN = 10;
 
     const TAKE_RECORD = 3;
+    const TAKE_RECORD_NEWS = 4;
 
     const ROLE_USER_SP_ADMIN = 1;
     const ROLE_USER_ADMIN = 2;
