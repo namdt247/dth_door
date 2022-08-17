@@ -18,5 +18,7 @@ class Message
     const MESSAGE_DELETE_SUCCESS = 'Xoá thành công';
     const MESSAGE_DELETE_FAILED = 'Xoá thất bại';
 
+    const MESSAGE_LOGIN_FAILED = 'Tên đăng nhập/mật khẩu không chính xác';
+
     const MESSAGE_ERROR = 'Có lỗi xảy ra';
 }

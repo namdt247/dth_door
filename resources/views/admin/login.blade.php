@@ -47,6 +47,11 @@
         </header><!-- form -->
         <form class="auth-form" method="post" action="/admin/login">
             <!-- .form-group -->
+            @if( \Illuminate\Support\Facades\Session::has('message_error'))
+                <div class="text-red mb-1">
+                    {{ \Illuminate\Support\Facades\Session::get('message_error') }}
+                </div>
+            @endif
             @csrf
             <div class="form-group">
                 <div class="form-label-group">

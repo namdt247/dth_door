@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Helper\Message;
 use App\Http\Controllers\Controller;
 use App\Http\Service\Admin\AuthService;
 use Illuminate\Http\Request;
@@ -28,10 +29,9 @@ class AdminController extends Controller
     public function postLogin(Request $request) {
         if ($this->authService->login($request)) {
             return redirect()->intended('/admin/dashboard');
-        } else {
-            // handle error
-            Auth::logout();
         }
+        Auth::logout();
+        return redirect('/admin/login')->with(['message_error' => Message::MESSAGE_LOGIN_FAILED]);
     }
 
     public function logout()
