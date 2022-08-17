@@ -10,11 +10,9 @@
     <meta name="description" content="DTHDoor - Trang quản trị hệ thống">
     <!-- FAVICONS -->
     <link rel="apple-touch-icon" sizes="144x144" href="/admin/assets/apple-touch-icon.png">
-{{--    <link rel="shortcut icon" href="/admin/assets/favicon.ico">--}}
     <link rel="icon" type="image/png" href="/frontend/images/logo_dth.jpg">
     <meta name="theme-color" content="#3063A0"><!-- End FAVICONS -->
     <!-- GOOGLE FONT -->
-    <link href="css.css?family=Fira+Sans:400,500,600" rel="stylesheet"><!-- End GOOGLE FONT -->
     <!-- BEGIN PLUGINS STYLES -->
     <link rel="stylesheet" href="/admin/assets/vendor/open-iconic/font/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="/admin/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
@@ -33,6 +31,8 @@
         // add loading class to html immediately
         document.querySelector('html').classList.add('loading');
     </script><!-- END THEME STYLES -->
+    <script src="/plugin/ckeditor/ckeditor.js"></script>
+    <script src="/plugin/func_ckfinder.js"></script>
 </head>
 <body>
 <!-- .app -->
@@ -89,6 +89,8 @@
 <script src="/admin/assets/javascript/pages/dashboard-demo.js"></script> <!-- END PAGE LEVEL JS -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async="" src="gtag/js.js?id=UA-116692175-1"></script>
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+<script src="/admin/assets/javascript/admin.js" type="text/javascript"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -99,5 +101,6 @@
     gtag('js', new Date());
     gtag('config', 'UA-116692175-1');
 </script>
+@yield('main-script')
 </body>
 </html>

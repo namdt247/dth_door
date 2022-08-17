@@ -43,4 +43,11 @@ class CategoryController extends Controller
         }
         return redirect('/admin/cate/list')->with(['message_error' => Message::MESSAGE_UPDATE_FAILED]);
     }
+
+    public function deleteCate($id) {
+        if($id && $this->cateService->deleteCate($id)) {
+            return redirect('/admin/cate/list')->with(['message_success' => Message::MESSAGE_DELETE_SUCCESS]);
+        }
+        return redirect('/admin/cate/list')->with(['message_error' => Message::MESSAGE_DELETE_FAILED]);
+    }
 }

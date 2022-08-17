@@ -7,6 +7,7 @@
 
 namespace App\Http\Service\Admin;
 
+use App\Helper\Config;
 use Illuminate\Http\Request;
 
 class ContactService extends AdminService
@@ -26,6 +27,16 @@ class ContactService extends AdminService
         $contact = $this->repositoty_contact->detailContact($id);
         if ($contact) {
             $contact->status = (int)$request->status;
+            return $contact->save();
+        }
+        return false;
+    }
+
+    public function deleteContact($id): bool
+    {
+        $contact = $this->repositoty_contact->detailContact($id);
+        if ($contact) {
+            $contact->status = Config::STATUS_DELETED;
             return $contact->save();
         }
         return false;

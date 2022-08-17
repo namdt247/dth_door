@@ -15,5 +15,8 @@ class Message
     const MESSAGE_CREATE_SUCCESS = 'Tạo mới thành công';
     const MESSAGE_CREATE_FAILED = 'Tạo mới thất bại';
 
+    const MESSAGE_DELETE_SUCCESS = 'Xoá thành công';
+    const MESSAGE_DELETE_FAILED = 'Xoá thất bại';
+
     const MESSAGE_ERROR = 'Có lỗi xảy ra';
 }

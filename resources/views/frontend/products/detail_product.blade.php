@@ -82,12 +82,24 @@
                                     </div>
                                 @endforeach
                             </div>
+                            <?php $countImgShow = 0; ?>
                             <div class="px-3 px-md-0">
                                 <div class="slider-nav">
                                     @foreach($product->large_photos as $image)
+                                        <?php $countImgShow++; ?>
                                         <div class="slider-item image-product-slide-small m-2" style="background-image:url({{ $image }})">
                                         </div>
                                     @endforeach
+
+                                    @while($countImgShow < 6)
+                                        @foreach($product->large_photos as $image)
+                                            @if($countImgShow < 6)
+                                                <?php $countImgShow++; ?>
+                                                <div class="slider-item image-product-slide-small m-2" style="background-image:url({{ $image }})">
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    @endwhile
                                 </div>
                             </div>
 
@@ -122,7 +134,7 @@
                         <div class="gap-40"></div>
 
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 product-description">
                                 <h3 class="column-title-small">Chi tiết sản phẩm</h3>
 
                                 {!! $product->description !!}
@@ -144,11 +156,11 @@
             @if(!empty($lstProductNotIn) && $lstProductNotIn->count())
                 <div class="row">
                     @foreach($lstProductNotIn as $prd)
-                        <div class="col-lg-4 col-md-6 col-6">
+                        <div class="col-lg-3 col-md-4 col-6">
                             <div class="ts-service-box">
                                 <div class="ts-service-image-wrapper custom-ts-service-image-wrapper">
                                     <a href="{!! route('user.detailProduct', $prd->id) !!}">
-                                        <div class="image-product" style="background-image:url({{$prd->large_photo}})">
+                                        <div class="image-product-other" style="background-image:url({{$prd->large_photo}})">
                                         </div>
                                     </a>
                                 </div>
@@ -189,7 +201,7 @@
                 asNavFor: '.slider-nav'
             });
             $('.slider-nav').slick({
-                slidesToShow: 4,
+                slidesToShow: 5,
                 slidesToScroll: 1,
                 asNavFor: '.slider-for',
                 dots: false,

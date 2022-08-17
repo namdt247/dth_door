@@ -27,7 +27,7 @@
                                     @foreach($lstUser as $user)
                                         <tr>
                                             <td class="align-middle">
-                                                <b>{!! $user->id !!}</b>
+                                                <b>{!! ++$loop->index !!}</b>
                                             </td>
                                             <td class="align-middle">
                                                 {!! $user->full_name !!}

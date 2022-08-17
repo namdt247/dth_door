@@ -33,4 +33,12 @@ class ContactController extends Controller
         }
         return redirect('/admin/contact/list')->with(['message_error' => Message::MESSAGE_UPDATE_FAILED]);
     }
+
+    public function deleteContact($id)
+    {
+        if ($id && $this->contactService->deleteContact($id)) {
+            return redirect('/admin/contact/list')->with(['message_success' => Message::MESSAGE_DELETE_SUCCESS]);
+        }
+        return redirect('/admin/contact/list')->with(['message_error' => Message::MESSAGE_DELETE_FAILED]);
+    }
 }

@@ -7,11 +7,14 @@ class Config {
     const STATUS_PENDING = 2;
     const STATUS_DELETED = -1;
 
+    const TYPE_NORMAL = 1;
+
     const NUMBER_PER_PAGE_CUSTOMER = 6;
     const NUMBER_PER_PAGE_ADMIN = 10;
 
     const TAKE_RECORD = 3;
     const TAKE_RECORD_NEWS = 4;
+    const TAKE_RECORD_OTHER = 4;
 
     const ROLE_USER_SP_ADMIN = 1;
     const ROLE_USER_ADMIN = 2;

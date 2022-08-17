@@ -45,12 +45,18 @@ Route::group([
         Route::post('/add', [CategoryController::class, 'createCate']);
         Route::get('/detail', [CategoryController::class, 'getDetailCate']);
         Route::post('/detail', [CategoryController::class, 'updateCate']);
+        Route::get('/delete/{id}', [CategoryController::class, 'deleteCate']);
     });
     # endregion
 
     # region product
     Route::group(['prefix' => 'product'], function(){
         Route::get('/list', [ProductController::class, 'getListProduct']);
+        Route::get('/add', [ProductController::class, 'getAddProduct']);
+        Route::post('/add', [ProductController::class, 'addProduct']);
+        Route::get('/detail', [ProductController::class, 'detailProduct']);
+        Route::post('/detail', [ProductController::class, 'updateProduct']);
+        Route::get('/delete/{id}', [ProductController::class, 'deleteProduct']);
     });
     # endregion
 
@@ -59,6 +65,7 @@ Route::group([
         Route::get('/list', [ContactController::class, 'getListContact']);
         Route::get('/detail', [ContactController::class, 'getDetailContact']);
         Route::post('/detail', [ContactController::class, 'updateContact']);
+        Route::get('/delete/{id}', [ContactController::class, 'deleteContact']);
     });
     # endregion
 });

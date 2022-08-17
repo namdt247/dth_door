@@ -26,7 +26,7 @@ class Repository_Product {
             ->whereNotIn(Query::ID, [$prdId])
             ->where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
             ->orderby(Query::CREATED_AT, Query::ORDER_BY_DESC)
-            ->take(Config::TAKE_RECORD)
+            ->take(Config::TAKE_RECORD_OTHER)
             ->get();
     }
 
@@ -41,5 +41,15 @@ class Repository_Product {
         return Product::where(Query::ID, Query::EQUAL, $prdId)
             ->where(Query::STATUS, Query::EQUAL, Config::STATUS_ACTIVE)
             ->first();
+    }
+
+    public function listProductPagination() {
+        return Product::where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
+            ->orderBy(Query::CREATED_AT, Query::ORDER_BY_DESC)
+            ->paginate(Config::NUMBER_PER_PAGE_ADMIN);
+    }
+
+    public function createProduct($data = array()) {
+        return Product::create($data);
     }
 }

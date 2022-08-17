@@ -7,12 +7,17 @@
 
 namespace App\Http\Service\Admin;
 
+use App\Helper\Config;
 use Illuminate\Http\Request;
 
 class CategoryService extends AdminService
 {
     public function listCategoryPagination() {
         return $this->repositoty_category->listCatePagination();
+    }
+
+    public function listCategory() {
+        return $this->repositoty_category->getListCate();
     }
 
     public function createCate(Request $request) {
@@ -35,6 +40,16 @@ class CategoryService extends AdminService
         if ($cate) {
             $cate->name = $request->name;
             $cate->note = $request->note;
+            return $cate->save();
+        }
+        return false;
+    }
+
+    public function deleteCate($id): bool
+    {
+        $cate = $this->repositoty_category->detailCate($id);
+        if ($cate) {
+            $cate->status = Config::STATUS_DELETED;
             return $cate->save();
         }
         return false;

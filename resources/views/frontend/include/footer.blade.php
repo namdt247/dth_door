@@ -14,7 +14,9 @@
                             <i class="fa fa-map-marker-alt mr-2"></i> Số 9, LK11B, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội
                         </p>
                         <p>
-                            <i class="fa fa-phone-alt mr-2"></i> (+84) 846863336
+                            <a href="tel:0846863336">
+                                <i class="fa fa-phone-alt mr-2"></i> (+84) 846863336
+                            </a>
                         </p>
                         <p>
                             <i class="fa fa-envelope mr-2"></i> dthdoor68@gmail.com

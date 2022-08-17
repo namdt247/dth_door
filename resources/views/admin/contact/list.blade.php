@@ -28,7 +28,7 @@
                                     @foreach($lstContact as $contact)
                                         <tr>
                                             <td class="align-middle">
-                                                <b>{!! $contact->id !!}</b>
+                                                <b>{!! ++$loop->index !!}</b>
                                             </td>
                                             <td class="align-middle">
                                                 {!! $contact->fullName !!}
@@ -41,16 +41,16 @@
                                             </td>
                                             <td class="align-middle">
                                                 @if($contact->status === \App\Helper\Config::CONTACT_PENDING)
-                                                    <span class="badge badge-subtle badge-primary">Pending</span>
+                                                    <span class="badge badge-subtle badge-primary">Chờ xử lý</span>
                                                 @elseif($contact->status === \App\Helper\Config::CONTACT_DONE)
-                                                    <span class="badge badge-subtle badge-success">Done</span>
+                                                    <span class="badge badge-subtle badge-success">Đã xử lý</span>
                                                 @endif
                                             </td>
                                             <td class="align-middle text-center" width="90px">
                                                 <a href="/admin/contact/detail?contactId={!! $contact->id !!}" class="btn btn-sm btn-icon btn-secondary">
                                                     <i class="fa fa-pencil-alt"></i> <span class="sr-only">Process</span>
                                                 </a>
-                                                <a href="#" class="btn btn-sm btn-icon btn-secondary">
+                                                <a href="#" data-id="{!! $contact->id !!}" class="btn btn-sm btn-icon btn-secondary" onclick="confirmDeleteContact(this);">
                                                     <i class="far fa-trash-alt"></i> <span class="sr-only">Remove</span>
                                                 </a>
                                             </td>

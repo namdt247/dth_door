@@ -28,8 +28,8 @@
                                     <div class="form-group">
                                         <label for="sel1">Trạng thái</label>
                                         <select class="custom-select" required name="status">
-                                            <option value="1" @if($contact->status === \App\Helper\Config::CONTACT_PENDING) selected @endif>Pending</option>
-                                            <option value="2" @if($contact->status === \App\Helper\Config::CONTACT_DONE) selected @endif>Done</option>
+                                            <option value="1" @if($contact->status === \App\Helper\Config::CONTACT_PENDING) selected @endif>Chờ xử lý</option>
+                                            <option value="2" @if($contact->status === \App\Helper\Config::CONTACT_DONE) selected @endif>Đã xử lý</option>
                                         </select>
                                     </div>
                                 </fieldset>

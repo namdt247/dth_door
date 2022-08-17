@@ -33,7 +33,7 @@
                                     @foreach($lstCate as $cate)
                                         <tr>
                                             <td class="align-middle">
-                                                <b>{!! $cate->id !!}</b>
+                                                <b>{!! ++$loop->index !!}</b>
                                             </td>
                                             <td class="align-middle">
                                                 {!! $cate->name !!}
@@ -50,9 +50,9 @@
                                             </td>
                                             <td class="align-middle text-center" width="90px">
                                                 <a href="/admin/cate/detail?cateId={!! $cate->id !!}" class="btn btn-sm btn-icon btn-secondary">
-                                                    <i class="fa fa-pencil-alt"></i> <span class="sr-only">Process</span>
+                                                    <i class="fa fa-pencil-alt"></i> <span class="sr-only">Detail</span>
                                                 </a>
-                                                <a href="#" class="btn btn-sm btn-icon btn-secondary">
+                                                <a href="#" data-id="{!! $cate->id !!}" class="btn btn-sm btn-icon btn-secondary" onclick="confirmDeleteCate(this);">
                                                     <i class="far fa-trash-alt"></i> <span class="sr-only">Remove</span>
                                                 </a>
                                             </td>
