@@ -8,31 +8,19 @@
     <title>
         @yield('title')
     </title>
-
-    <script type="application/ld+json">
-      {
-        "name": "DTHDoor Tech",
-        "description": "Giải pháp nhôm kính thông minh",
-        "author":
-        {
-          "@type": "Person",
-          "name": "DTHDoor"
-        },
-        "@type": "WebSite",
-        "url": "",
-        "headline": "",
-      }
-    </script><!-- End SEO tag -->
-
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="DTHDoor - Giải pháp thông minh về nhôm kính cao cấp, tận tâm đến từng chi tiết">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
     <!-- Favicon
     ================================================== -->
     <link rel="icon" type="image/png" href="/frontend/images/logo_dth.jpg">
+
+    <!-- SEO
+    ================================================== -->
+    {!! SEO::generate() !!}
+    <!-- End SEO tag -->
 
     <!-- CSS
     ================================================== -->

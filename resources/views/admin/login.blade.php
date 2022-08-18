@@ -5,9 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DTHDoor - Admin</title>
+    <title>Admin DTHDoor | Log in</title>
     <!-- Favicons -->
-    <meta name="description" content="DTHDoor - Admin login">
     <link rel="icon" type="image/png" href="/frontend/images/logo_dth.jpg">
     <meta name="theme-color" content="#3063A0"><!-- Google font -->
     <!-- BEGIN PLUGINS STYLES -->

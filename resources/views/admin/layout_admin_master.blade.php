@@ -4,10 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- End Required meta tags -->
-    <!-- Begin SEO tag -->
     <title>DTHDoor - Admin</title>
-    <meta property="og:locale" content="en_US">
-    <meta name="description" content="DTHDoor - Trang quản trị hệ thống">
     <!-- FAVICONS -->
     <link rel="apple-touch-icon" sizes="144x144" href="/admin/assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/frontend/images/logo_dth.jpg">
