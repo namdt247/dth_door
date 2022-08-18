@@ -11,7 +11,7 @@ return [
         'defaults'       => [
             'title'        => "DTHDoor - Giải pháp thông minh về nhôm kính cao cấp", // set false to total remove
             'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => 'DTHDoor - Giải pháp thông minh về nhôm kính cao cấp', // set false to total remove
+            'description'  => 'DTHDoor - Chuyên tư vấn, sản xuất các sản phẩm về nhôm kính cao cấp. Địa chỉ: Số 9, LK11B, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội. Điện thoại: 0846863336. Email: dthdoor68@gmail.com', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => ['dth', 'dthdoor', 'door tech', 'nhôm kính', 'nhom kinh', 'cửa nhôm', 'cua nhom', 'cửa kính', 'cua kinh'],
             'canonical'    => null, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
@@ -37,7 +37,7 @@ return [
          */
         'defaults' => [
             'title'       => 'DTHDoor - Giải pháp thông minh về nhôm kính cao cấp', // set false to total remove
-            'description' => 'DTHDoor - Giải pháp thông minh về nhôm kính cao cấp', // set false to total remove
+            'description' => 'DTHDoor - Chuyên tư vấn, sản xuất các sản phẩm về nhôm kính cao cấp. Địa chỉ: Số 9, LK11B, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội. Điện thoại: 0846863336. Email: dthdoor68@gmail.com', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => 'Website',
             'site_name'   => 'Dthdoor',
@@ -60,10 +60,10 @@ return [
          */
         'defaults' => [
             'title'       => 'DTHDoor - Giải pháp thông minh về nhôm kính cao cấp', // set false to total remove
-            'description' => 'DTHDoor - Giải pháp thông minh về nhôm kính cao cấp', // set false to total remove
+            'description' => 'DTHDoor - Chuyên tư vấn, sản xuất các sản phẩm về nhôm kính cao cấp. Địa chỉ: Số 9, LK11B, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội. Điện thoại: 0846863336. Email: dthdoor68@gmail.com', // set false to total remove
             'url'         => null, // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'type'        => 'WebPage',
-            'images'      => ['DTHDoor - Giải pháp thông minh về nhôm kính cao cấp'],
+            'images'      => ['https://res.cloudinary.com/tena2472/image/upload/v1660792545/dth_door/ojgqbq3dlkpunhal8jp3.png'],
         ],
     ],
 ];
