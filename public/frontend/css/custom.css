@@ -97,6 +97,14 @@
     font-weight: bold;
 }
 
+.footer-map:hover {
+    color: #999999;
+}
+
+.top-bar-map:hover {
+    color: #555555;
+}
+
 @media (min-width:769px) and (max-width:1200px) {
     .image-product-slide-small {
         height: 70px;

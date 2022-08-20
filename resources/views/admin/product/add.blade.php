@@ -5,6 +5,16 @@
         <div class="page">
             <div class="page-inner">
                 <header class="page-title-bar">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/admin/dashboard"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                <a href="#">Thêm mới sản phẩm</a>
+                            </li>
+                        </ol>
+                    </nav>
                     <h1 class="page-title"> Thêm mới sản phẩm </h1>
                 </header>
                 <div class="page-section">

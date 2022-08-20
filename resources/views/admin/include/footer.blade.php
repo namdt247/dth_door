@@ -1,5 +1,5 @@
 <footer class="app-footer">
-    <div class="copyright"> Copyright © <script>
+    <div class="copyright"> Copyright © <b><script>
             document.write(new Date().getFullYear())
-        </script>. All right reserved. </div>
+        </script></b> DTH. All right reserved. </div>
 </footer>

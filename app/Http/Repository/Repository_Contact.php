@@ -21,4 +21,20 @@ class Repository_Contact {
             ->where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
             ->first();
     }
+
+    public function getTotalContact() {
+        return Contact::where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
+            ->count();
+    }
+
+    public function getTotalContactInMonth($month) {
+        return Contact::where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
+            ->whereMonth(Query::CREATED_AT, Query::EQUAL, $month)
+            ->count();
+    }
+
+    public function getTotalContactInPending() {
+        return Contact::whereNotIn(Query::STATUS, [Config::STATUS_DELETED, Config::CONTACT_DONE])
+            ->count();
+    }
 }

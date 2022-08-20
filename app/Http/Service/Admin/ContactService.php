@@ -41,4 +41,17 @@ class ContactService extends AdminService
         }
         return false;
     }
+
+    public function getTotalContact() {
+        return $this->repositoty_contact->getTotalContact();
+    }
+
+    public function getTotalContactInMonth() {
+        $month = date('m');
+        return $this->repositoty_contact->getTotalContactInMonth($month);
+    }
+
+    public function getTotalContactPending() {
+        return $this->repositoty_contact->getTotalContactInPending();
+    }
 }

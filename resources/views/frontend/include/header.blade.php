@@ -17,7 +17,7 @@
                                         <p class="info-box-title">Phone</p>
                                         <p class="info-box-subtitle">
                                             <a href="tel:0846863336">
-                                                (+84) 846863336
+                                                (+84) {!! \App\Helper\CompanyInfo::PHONE !!}
                                             </a>
                                         </p>
                                     </div>
@@ -29,7 +29,7 @@
                                         <p class="info-box-title">Email</p>
                                         <p class="info-box-subtitle">
                                             <a href="mailto:dthdoor68@gmail.com">
-                                                dthdoor68@gmail.com
+                                                {!! \App\Helper\CompanyInfo::EMAIL !!}
                                             </a>
                                         </p>
                                     </div>

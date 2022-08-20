@@ -24,38 +24,46 @@
                             <div class="col-lg-9">
                                 <div class="metric-row metric-flush">
                                     <div class="col">
-                                        <a href="user-teams.html" class="metric metric-bordered align-items-center">
-                                            <h2 class="metric-label"> Teams </h2>
+                                        <a href="/admin/product/list" class="metric metric-bordered align-items-center">
+                                            <h2 class="metric-label"> Tổng số sản phẩm </h2>
                                             <p class="metric-value h3">
-                                                <sub><i class="oi oi-people"></i></sub> <span class="value">8</span>
+                                                <sub><i class="fa fa-cube" aria-hidden="true"></i></sub> <span class="value">
+                                                    {!! $data['totalProduct'] !!}
+                                                </span>
                                             </p>
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a href="user-projects.html" class="metric metric-bordered align-items-center">
-                                            <h2 class="metric-label"> Projects </h2>
+                                        <a href="/admin/contact/list" class="metric metric-bordered align-items-center">
+                                            <h2 class="metric-label"> Tổng số liên hệ </h2>
                                             <p class="metric-value h3">
-                                                <sub><i class="oi oi-fork"></i></sub> <span class="value">12</span>
+                                                <sub><i class="fa fa-comment" aria-hidden="true"></i></sub> <span class="value">
+                                                    {!! $data['totalContact'] !!}
+                                                </span>
                                             </p>
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a href="user-tasks.html" class="metric metric-bordered align-items-center">
-                                            <h2 class="metric-label"> Active Tasks </h2>
+                                        <a href="/admin/contact/list" class="metric metric-bordered align-items-center">
+                                            <h2 class="metric-label"> Liên hệ trong tháng </h2>
                                             <p class="metric-value h3">
-                                                <sub><i class="fa fa-tasks"></i></sub> <span class="value">64</span>
+                                                <sub><i class="fa fa-comments" aria-hidden="true"></i></sub> <span class="value">
+                                                    {!! $data['totalContactInMonth'] !!}
+                                                </span>
                                             </p>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <a href="user-tasks.html" class="metric metric-bordered">
+                            <div class="col-lg-3 text-center">
+                                <a href="/admin/contact/list" class="metric metric-bordered">
                                     <div class="metric-badge">
-                                        <span class="badge badge-lg badge-success"><span class="oi oi-media-record pulse mr-1"></span> ONGOING TASKS</span>
+                                        <span class="badge badge-lg badge-warning"><span class="oi oi-media-record pulse mr-1"></span> Liên hệ chờ xử lý</span>
                                     </div>
                                     <p class="metric-value h3">
-                                        <sub><i class="oi oi-timer"></i></sub> <span class="value">8</span>
+                                        <sub><i class="oi oi-timer"></i></sub> <span class="value">
+                                            {!! $data['totalContactPending'] !!}
+                                        </span>
                                     </p>
                                 </a>
                             </div>

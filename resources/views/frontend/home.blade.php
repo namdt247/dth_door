@@ -33,7 +33,7 @@
                     <?php $count = 0; ?>
                     @foreach($lstProductNewest as $prd)
                         <?php $count++; ?>
-                        <div class="col-lg-4 col-md-6 col-6 mb-4 {{ $count >= 4 ? 'd-block d-md-none' : '' }}">
+                        <div class="col-lg-4 col-md-6 col-6 mb-4 {{ $count >= 4 ? 'd-block d-lg-none' : '' }}">
                             <div class="latest-post">
                                 <div class="latest-post-media">
 {{--                                    <a href="{!! route('user.detailProduct', $prd->id) !!}" class="latest-post-img">--}}

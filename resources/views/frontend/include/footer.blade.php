@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-4 col-md-6 footer-widget footer-about">
-                    <h3 class="widget-title">Address</h3>
+                    <h3 class="widget-title">Liên hệ</h3>
 {{--                    <img loading="lazy" width="150px" class="footer-logo" src="/frontend/images/footer-logo.png"--}}
 {{--                         alt="Constra">--}}
 {{--                    <p>--}}
@@ -11,15 +11,17 @@
 {{--                    </p>--}}
                     <div>
                         <p>
-                            <i class="fa fa-map-marker-alt mr-2"></i> Số 9, LK11B, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội
-                        </p>
-                        <p>
-                            <a href="tel:0846863336">
-                                <i class="fa fa-phone-alt mr-2"></i> (+84) 846863336
+                            <a href="{!! \App\Helper\CompanyInfo::LOCATION_MAP !!}" target="_blank" class="footer-map">
+                                <i class="fa fa-map-marker-alt mr-2"></i> {!! \App\Helper\CompanyInfo::ADDRESS !!}
                             </a>
                         </p>
                         <p>
-                            <i class="fa fa-envelope mr-2"></i> dthdoor68@gmail.com
+                            <a href="tel:0846863336">
+                                <i class="fa fa-phone-alt mr-2"></i> (+84) {!! \App\Helper\CompanyInfo::PHONE !!}
+                            </a>
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope mr-2"></i> {!! \App\Helper\CompanyInfo::EMAIL !!}
                         </p>
                     </div>
                     <div class="footer-social">

@@ -4,15 +4,27 @@
     <div class="wrapper">
         <div class="page">
             <div class="page-inner">
-                <header class="page-title-bar d-flex justify-content-between">
-                    <div class="d-md-flex align-items-md-start">
-                        <h1 class="page-title mr-sm-auto">Quản lý danh mục</h1>
-                    </div>
-                    <div>
-                        <a href="/admin/cate/add" class="btn btn-outline-secondary" type="submit">
-                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                            Thêm mới
-                        </a>
+                <header class="page-title-bar">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/admin/dashboard"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                <a href="#">Danh mục</a>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1 class="page-title">Quản lý danh mục</h1>
+                        </div>
+                        <div class="col-md-6 text-md-right">
+                            <a href="/admin/cate/add" class="btn btn-outline-secondary" type="submit">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                Thêm mới
+                            </a>
+                        </div>
                     </div>
                 </header>
                 <div class="page-section">

@@ -5,6 +5,16 @@
         <div class="page">
             <div class="page-inner">
                 <header class="page-title-bar">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/admin/dashboard"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                <a href="#">Liên hệ</a>
+                            </li>
+                        </ol>
+                    </nav>
                     <div class="d-md-flex align-items-md-start">
                         <h1 class="page-title mr-sm-auto">Quản lý liên hệ</h1>
                     </div>

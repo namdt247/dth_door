@@ -52,4 +52,9 @@ class Repository_Product {
     public function createProduct($data = array()) {
         return Product::create($data);
     }
+
+    public function getTotalProduct() {
+        return Product::where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
+            ->count();
+    }
 }

@@ -23,7 +23,7 @@
                         </h4>
                         <div class="latest-post-meta">
                             <span class="post-item-date">
-                                <i class="fa fa-clock-o"></i> Jan,
+                                <i class="fa fa-clock-o"></i>Jan,
                                 <script>
                                     document.write(new Date().getFullYear())
                                 </script>
@@ -46,7 +46,7 @@
                         </h4>
                         <div class="latest-post-meta">
                             <span class="post-item-date">
-                                <i class="fa fa-clock-o"></i> Sep,
+                                <i class="fa fa-clock-o"></i>Dec,
                                 <script>
                                     document.write(new Date().getFullYear() - 1)
                                 </script>
@@ -55,13 +55,12 @@
                     </div>
                 </div><!-- Latest post end -->
             </div><!-- 3rd post col end -->
-            <div class="col-lg-4 col-md-6 col-6 mb-4 d-block d-md-none">
+            <div class="col-lg-4 col-md-6 col-6 mb-4 d-block d-lg-none">
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="javascript:void(0)" class="latest-post-img">
                             <div class="highlight-project" style="background-image: url(/frontend/images/highlight-project/highlight-project-01.jpg)">
                             </div>
-{{--                            <img loading="lazy" class="img-fluid" src="/frontend/images/highlight-project/highlight-project-01.jpg" alt="img">--}}
                         </a>
                     </div>
                     <div class="post-body">
@@ -70,7 +69,7 @@
                         </h4>
                         <div class="latest-post-meta">
                             <span class="post-item-date">
-                                <i class="fa fa-clock-o"></i> June,
+                                <i class="fa fa-clock-o"></i>Oct,
                                 <script>
                                     document.write(new Date().getFullYear() - 1)
                                 </script>
@@ -94,7 +93,7 @@
                         </h4>
                         <div class="latest-post-meta">
                             <span class="post-item-date">
-                                <i class="fa fa-clock-o"></i> Aug,
+                                <i class="fa fa-clock-o"></i>Sep,
                                 <script>
                                     document.write(new Date().getFullYear() - 1)
                                 </script>

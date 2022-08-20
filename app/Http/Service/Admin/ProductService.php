@@ -67,4 +67,8 @@ class ProductService extends AdminService
         }
         return false;
     }
+
+    public function getTotalProduct() {
+        return $this->repository_product->getTotalProduct();
+    }
 }

@@ -26,7 +26,7 @@
                 <button class="hamburger hamburger-squeeze" type="button" data-toggle="aside" aria-label="toggle menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button> <!-- /toggle menu -->
             </div><!-- /.top-bar-item -->
             <!-- .top-bar-item -->
-            <div class="top-bar-item top-bar-item-right px-0 d-none d-sm-flex">
+            <div class="top-bar-item top-bar-item-right px-0 d-flex">
                 <!-- .btn-account -->
                 <div class="pr-3 text-right">
                     <div class="header-company">

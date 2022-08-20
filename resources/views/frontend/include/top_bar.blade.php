@@ -7,7 +7,9 @@
                         <i class="fas fa-map-marker-alt mb-1 mb-md-0"></i>
                         <br class="d-md-none d-block"/>
                         <p class="info-text">
-                            Số 9, LK11B, Khu đô thị Mỗ Lao, Hà Đông, Hà Nội
+                            <a href="{!! \App\Helper\CompanyInfo::LOCATION_MAP !!}" target="_blank" class="top-bar-map">
+                                {!! \App\Helper\CompanyInfo::ADDRESS !!}
+                            </a>
                         </p>
                     </li>
                 </ul>
