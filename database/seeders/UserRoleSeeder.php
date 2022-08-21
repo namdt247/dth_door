@@ -16,7 +16,7 @@ class UserRoleSeeder extends Seeder
         if (env('DB_CONNECTION') == 'mysql') {
             \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         }
-        \Illuminate\Support\Facades\DB::table('role_user')->truncate();
+//        \Illuminate\Support\Facades\DB::table('role_user')->truncate();
         \Illuminate\Support\Facades\DB::table('role_user')->insert([
             [
                 'role_id' => 1,

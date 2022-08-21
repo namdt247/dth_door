@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
         if (env('DB_CONNECTION') == 'mysql') {
             \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         }
-        \Illuminate\Support\Facades\DB::table('users')->truncate();
+//        \Illuminate\Support\Facades\DB::table('users')->truncate();
         \Illuminate\Support\Facades\DB::table('users')->insert([
             [
                 'id' => 1,

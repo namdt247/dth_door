@@ -16,8 +16,7 @@ class CategorySeeder extends Seeder
         if (env('DB_CONNECTION') == 'mysql') {
             \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         }
-        \Illuminate\Support\Facades\DB::table('categories')->truncate();
-
+//        \Illuminate\Support\Facades\DB::table('categories')->truncate();
         \Illuminate\Support\Facades\DB::table('categories')->insert([
             [
                 'id' => 1,

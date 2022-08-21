@@ -13,6 +13,7 @@ class Repository_Contact {
 
     public function getListContactPagination() {
         return Contact::where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
+            ->orderBy(Query::CREATED_AT, Query::ORDER_BY_DESC)
             ->paginate(Config::NUMBER_PER_PAGE_ADMIN);
     }
 

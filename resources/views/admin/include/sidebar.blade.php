@@ -103,6 +103,12 @@
                             <span class="menu-text">Liên hệ</span>
                         </a>
                     </li>
+                    <li class="menu-item {{ request()->is('admin/feedback/*') ? 'has-active' : '' }}">
+                        <a href="/admin/feedback/list" class="menu-link">
+                            <span class="menu-icon fa fa-envelope-open"></span>
+                            <span class="menu-text">Phản hồi</span>
+                        </a>
+                    </li>
                     <!-- /.menu-item -->
                 </ul><!-- /.menu -->
             </nav><!-- /.stacked-menu -->

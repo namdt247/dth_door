@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\FeedbackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,14 @@ Route::group([
         Route::get('/detail', [ContactController::class, 'getDetailContact']);
         Route::post('/detail', [ContactController::class, 'updateContact']);
         Route::get('/delete/{id}', [ContactController::class, 'deleteContact']);
+    });
+    # endregion
+
+    # region feedback
+    Route::group(['prefix' => 'feedback'], function(){
+        Route::get('/list', [FeedbackController::class, 'getListFeedback']);
+        Route::get('/detail', [FeedbackController::class, 'getDetailFeedback']);
+        Route::post('/detail', [FeedbackController::class, 'updateFeedback']);
     });
     # endregion
 });
