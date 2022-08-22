@@ -4,7 +4,11 @@ namespace App\Http\Service\Frontend;
 
 class ProductService extends FrontendService {
     public function getListProductByCate($catId) {
-        return $this->repository_product->getListProductByCate($catId);
+        $cate = $this->repositoty_category->detailCate($catId);
+        if($cate) {
+            return $this->repository_product->getListProductByCate($catId);
+        }
+        return null;
     }
 
     public function detailProduct($prdId) {

@@ -21,6 +21,12 @@ class Config {
     const ROLE_USER_MODERATOR = 3;
     const ROLE_USER_NORMAL = 4;
 
-    const CONTACT_PENDING = 1;
-    const CONTACT_DONE = 2;
+    const CONTACT_RECEIVE = 1;
+    const CONTACT_ADVISE = 2;
+    const CONTACT_QUOTE = 3;
+    const CONTACT_CONTRACT = 4;
+    const CONTACT_CONSTRUCTION = 5;
+    const CONTACT_ACCEPTANCE = 6;
+    const CONTACT_COMPETE = 7;
+    const CONTACT_CANCEL = 101;
 }

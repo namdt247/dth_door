@@ -35,7 +35,7 @@ class Repository_Contact {
     }
 
     public function getTotalContactInPending() {
-        return Contact::whereNotIn(Query::STATUS, [Config::STATUS_DELETED, Config::CONTACT_DONE])
+        return Contact::whereNotIn(Query::STATUS, [Config::STATUS_DELETED, Config::CONTACT_COMPETE, Config::CONTACT_CANCEL])
             ->count();
     }
 }

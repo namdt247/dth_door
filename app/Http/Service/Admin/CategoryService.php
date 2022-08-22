@@ -8,6 +8,7 @@
 namespace App\Http\Service\Admin;
 
 use App\Helper\Config;
+use App\Helper\StatusCode;
 use Illuminate\Http\Request;
 
 class CategoryService extends AdminService
@@ -45,13 +46,18 @@ class CategoryService extends AdminService
         return false;
     }
 
-    public function deleteCate($id): bool
+    public function deleteCate($id): int
     {
         $cate = $this->repositoty_category->detailCate($id);
         if ($cate) {
+            $cateHasProducts = $this->repository_product->getListProductByCate2($cate->id);
+            if(count($cateHasProducts) > 0) {
+                return StatusCode::CATE_HAS_PRODUCT;
+            }
             $cate->status = Config::STATUS_DELETED;
-            return $cate->save();
+            $cate->save();
+            return StatusCode::STATUS_SUCCESS;
         }
-        return false;
+        return StatusCode::STATUS_ERROR;
     }
 }

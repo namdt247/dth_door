@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Helper\Message;
 use App\Http\Controllers\Controller;
 use App\Http\Service\Frontend\CategoryService;
 use App\Http\Service\Frontend\ContactService;
@@ -37,8 +38,8 @@ class UserController extends Controller
     public function postContact(Request $request) {
         $isCreateContact = $this->contactService->createContact($request);
         if ($isCreateContact)
-            return redirect()->back()->with(['success_message' => 'Gửi yêu cầu thành công, chúng tôi sẽ sớm liên hệ với bạn']);
+            return redirect()->back()->with(['success_message' => Message::MESSAGE_SEND_REQUEST_SUCCESS]);
         else
-            return redirect()->back()->with(['error_message' => 'Gửi yêu cầu thất bại, vui lòng thử lại']);
+            return redirect()->back()->with(['error_message' => Message::MESSAGE_SEND_REQUEST_FAILED]);
     }
 }

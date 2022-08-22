@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             [
                 'id' => 1,
                 'user_name' => 'supperadmin',
-                'email' => 'supper.admin@gmail.com',
+                'email' => 'super.admin@gmail.com',
                 'password' => bcrypt('123@123aA'),
                 'full_name' => 'Super Admin',
                 'user_role' => Config::ROLE_USER_SP_ADMIN,

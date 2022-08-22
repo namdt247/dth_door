@@ -8,6 +8,7 @@
 namespace App\Http\Service\Admin;
 
 use App\Helper\Config;
+use App\Helper\StatusCode;
 use Illuminate\Http\Request;
 
 class ProductService extends AdminService
@@ -17,31 +18,39 @@ class ProductService extends AdminService
     }
 
     public function createProduct(Request $request) {
-        $arrImg = $request->thumbnails;
-        $thumbnail = '';
-        foreach ($arrImg as $img) {
-            $thumbnail .= $img . ',';
+        $cateId = $request->category_id;
+        $cate = $this->repositoty_category->detailCate($cateId);
+        if ($cate) {
+            $arrImg = $request->thumbnails;
+            $thumbnail = '';
+            foreach ($arrImg as $img) {
+                $thumbnail .= $img . ',';
+            }
+            $data = [
+                'category_id' => $request->category_id,
+                'name' => $request->name,
+                'title' => $request->title,
+                'thumbnail' => $thumbnail,
+                'description' => $request->description,
+                'type' => Config::TYPE_NORMAL
+            ];
+            if ($this->repository_product->createProduct($data)) {
+                return StatusCode::STATUS_SUCCESS;
+            }
+            return StatusCode::STATUS_ERROR;
         }
-        $data = [
-            'category_id' => $request->category_id,
-            'name' => $request->name,
-            'title' => $request->title,
-            'thumbnail' => $thumbnail,
-            'description' => $request->description,
-            'type' => Config::TYPE_NORMAL
-        ];
-        return $this->repository_product->createProduct($data);
+        return StatusCode::CATE_DELETED;
     }
 
     public function detailProduct(Request $request) {
         $id = $request->query('prdId');
-        return $this->repository_product->detailProduct($id);
+        return $this->repository_product->detailProduct2($id);
     }
 
     public function updateProduct(Request $request): bool
     {
         $id = $request->query('prdId');
-        $product = $this->repository_product->detailProduct($id);
+        $product = $this->repository_product->detailProduct2($id);
         if ($product) {
             $arrImg = $request->thumbnails;
             $thumbnail = '';
@@ -60,7 +69,7 @@ class ProductService extends AdminService
 
     public function deleteProduct($id): bool
     {
-        $product = $this->repository_product->detailProduct($id);
+        $product = $this->repository_product->detailProduct2($id);
         if ($product) {
             $product->status = Config::STATUS_DELETED;
             return $product->save();

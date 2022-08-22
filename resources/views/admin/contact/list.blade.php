@@ -46,14 +46,28 @@
                                             <td class="align-middle">
                                                 {!! $contact->phone !!}
                                             </td>
-                                            <td class="align-middle" width="45%">
+                                            <td class="align-middle" width="35%">
                                                 {!! $contact->message !!}
                                             </td>
                                             <td class="align-middle">
-                                                @if($contact->status === \App\Helper\Config::CONTACT_PENDING)
+                                                @if(assert($contact->status_parent))
+                                                    @if($contact->status == \App\Helper\Config::CONTACT_CANCEL)
+                                                        <span class="badge badge-lg badge-danger">
+                                                            {!! $contact->status_parent->stt_name !!}
+                                                        </span>
+                                                    @elseif($contact->status == \App\Helper\Config::CONTACT_COMPETE)
+                                                        <span class="badge badge-lg badge-primary">
+                                                            {!! $contact->status_parent->stt_name !!}
+                                                        </span>
+                                                    @else
+                                                        <span class="badge badge-lg badge-warning">
+                                                            <span class="oi oi-media-record pulse">
+                                                            </span>
+                                                            {!! $contact->status_parent->stt_name !!}
+                                                        </span>
+                                                    @endif
+                                                @else
                                                     <span class="badge badge-subtle badge-primary">Chờ xử lý</span>
-                                                @elseif($contact->status === \App\Helper\Config::CONTACT_DONE)
-                                                    <span class="badge badge-subtle badge-success">Đã xử lý</span>
                                                 @endif
                                             </td>
                                             <td class="align-middle text-center" width="90px">

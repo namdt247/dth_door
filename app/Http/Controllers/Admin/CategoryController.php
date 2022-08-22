@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Helper\Message;
+use App\Helper\StatusCode;
 use App\Http\Controllers\Controller;
 use App\Http\Service\Admin\CategoryService;
 use Illuminate\Http\Request;
@@ -34,20 +35,30 @@ class CategoryController extends Controller
 
     public function getDetailCate(Request $request) {
         $cate = $this->cateService->detailCate($request);
-        return view('/admin/category/detail', compact('cate'));
+        if($cate) {
+            return view('/admin/category/detail', compact('cate'));
+        }
+        return redirect('/admin/cate/list')->with(['message_error' => Message::MESSAGE_RECORD_NOT_FOUND]);
     }
 
     public function updateCate(Request $request) {
         if($this->cateService->updateCate($request)) {
             return redirect('/admin/cate/list')->with(['message_success' => Message::MESSAGE_UPDATE_SUCCESS]);
         }
-        return redirect('/admin/cate/list')->with(['message_error' => Message::MESSAGE_UPDATE_FAILED]);
+        return redirect('/admin/cate/list')->with(['message_error' => Message::MESSAGE_RECORD_NOT_FOUND]);
     }
 
     public function deleteCate($id) {
-        if($id && $this->cateService->deleteCate($id)) {
-            return redirect('/admin/cate/list')->with(['message_success' => Message::MESSAGE_DELETE_SUCCESS]);
+        if ($id) {
+            $code = $this->cateService->deleteCate($id);
+            if ($code == StatusCode::STATUS_SUCCESS) {
+                return redirect('/admin/cate/list')->with(['message_success' => Message::MESSAGE_DELETE_SUCCESS]);
+            }
+            if ($code == StatusCode::CATE_HAS_PRODUCT) {
+                return redirect('/admin/cate/list')->with(['message_error' => Message::MESSAGE_CATE_HAS_PRODUCT]);
+            }
+            return redirect('/admin/cate/list')->with(['message_error' => Message::MESSAGE_RECORD_NOT_FOUND]);
         }
-        return redirect('/admin/cate/list')->with(['message_error' => Message::MESSAGE_DELETE_FAILED]);
+        return redirect('/admin/cate/list')->with(['message_error' => Message::MESSAGE_ERROR]);
     }
 }

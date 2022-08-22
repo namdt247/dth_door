@@ -23,11 +23,11 @@ class ContactService extends FrontendService {
 
         try {
             // Send mail
-            Mail::send('mail.notification', $dataSendMail, function ($message) {
-                $message->to('dthdoor68@gmail.com', 'Phòng tư vấn DTH')
-                    ->subject('Khách hàng DTH Door cần tư vấn sản phẩm');
-                $message->from('noreply.dthdoor@gmail.com', 'DTH Door Support');
-            });
+//            Mail::send('mail.notification', $dataSendMail, function ($message) {
+//                $message->to('dthdoor68@gmail.com', 'Phòng tư vấn DTH')
+//                    ->subject('Khách hàng DTH Door cần tư vấn sản phẩm');
+//                $message->from('noreply.dthdoor@gmail.com', 'DTH Door Support');
+//            });
         } catch (\Exception $exception) {
             // error
         } finally {

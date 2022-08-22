@@ -39,7 +39,12 @@ class Repository_Product {
 
     public function detailProduct($prdId) {
         return Product::where(Query::ID, Query::EQUAL, $prdId)
-            ->where(Query::STATUS, Query::EQUAL, Config::STATUS_ACTIVE)
+            ->first();
+    }
+
+    public function detailProduct2($prdId) {
+        return Product::where(Query::ID, Query::EQUAL, $prdId)
+            ->where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
             ->first();
     }
 
