@@ -76,7 +76,7 @@
                                             </td>
                                             <td class="align-middle">
                                                 <span class="badge badge-subtle badge-success">
-                                                    {!! date("d/m/Y", strtotime($prd->created_at)); !!}
+                                                    {!! date("d/m/Y", strtotime($prd->created_at)) !!}
                                                 </span>
                                             </td>
                                             <td class="align-middle text-center" width="90px">

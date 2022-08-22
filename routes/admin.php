@@ -67,6 +67,7 @@ Route::group([
         Route::get('/detail', [ContactController::class, 'getDetailContact']);
         Route::post('/detail', [ContactController::class, 'updateContact']);
         Route::get('/delete/{id}', [ContactController::class, 'deleteContact']);
+        Route::get('/cancel', [ContactController::class, 'cancelContact']);
     });
     # endregion
 

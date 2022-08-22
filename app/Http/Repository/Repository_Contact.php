@@ -44,4 +44,9 @@ class Repository_Contact {
         return Contact_status::where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
             ->get();
     }
+
+    public function getContactStatus($id) {
+        return Contact_status::where(Query::ID, Query::EQUAL, $id)
+            ->first();
+    }
 }

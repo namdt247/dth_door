@@ -10,7 +10,7 @@ namespace App\Helper;
 class Message
 {
     const MESSAGE_UPDATE_SUCCESS = 'Cập nhật thành công';
-    const MESSAGE_UPDATE_FAILED = 'Cập nhật thất bại';
+    const MESSAGE_UPDATE_FAILED = 'Cập nhật thất bại, vui lòng thử lại';
 
     const MESSAGE_CREATE_SUCCESS = 'Tạo mới thành công';
     const MESSAGE_CREATE_FAILED = 'Tạo mới thất bại';
@@ -28,6 +28,10 @@ class Message
 
     const MESSAGE_CATE_HAS_PRODUCT = 'Không thể xoá danh mục hiện có chứa sản phẩm';
     const MESSAGE_CATE_DELETED = 'Không thể thêm sản phẩm vào danh mục đã bị xoá';
+
+    const MESSAGE_CONTACT_UPDATED = 'Liên hệ đã được cập nhật trạng thái, vui lòng kiểm tra lại';
+    const MESSAGE_CONTACT_CANCELED = 'Liên hệ đã huỷ trước đó trên hệ thống';
+    const MESSAGE_CONTACT_NOT_CANCEL = 'Chỉ có thể huỷ trạng thái trước giao đoạn hợp đồng';
 
     const MESSAGE_ERROR = 'Có lỗi xảy ra, vui lòng thử lại';
 }

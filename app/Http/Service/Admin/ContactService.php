@@ -8,6 +8,7 @@
 namespace App\Http\Service\Admin;
 
 use App\Helper\Config;
+use App\Helper\StatusCode;
 use Illuminate\Http\Request;
 
 class ContactService extends AdminService
@@ -21,15 +22,65 @@ class ContactService extends AdminService
         return $this->repositoty_contact->detailContact($id);
     }
 
-    public function updateContact(Request $request): bool
+    public function updateContact(Request $request): int
     {
         $id = $request->query('contactId');
+        $statusUpdate = $request->status_update;
+        $processDate = $request->process_date;
+        $processContent = $request->process_content;
+
         $contact = $this->repositoty_contact->detailContact($id);
         if ($contact) {
-            $contact->status = (int)$request->status;
-            return $contact->save();
+            if ($contact->status >= $statusUpdate) {
+                return StatusCode::CONTACT_UPDATED;
+            }
+
+            $contactStt = $this->repositoty_contact->getContactStatus($statusUpdate);
+
+            $contactContent = unserialize($contact->ct_content);
+            $contactContent[$contactStt->stt_name] = [
+                'date_process' => $statusUpdate ? date("Y/m/d", strtotime($processDate)) : date("Y/m/d"),
+                'date_update' => date("Y/m/d"),
+                'content' => $processContent,
+            ];
+
+            $contact->status = $statusUpdate;
+            $contact->ct_content = serialize($contactContent);
+            $contact->save();
+            return StatusCode::STATUS_SUCCESS;
         }
-        return false;
+        return StatusCode::STATUS_ERROR;
+    }
+
+    public function cancelContact(Request $request): int
+    {
+        $id = $request->query('contactId');
+
+        $contact = $this->repositoty_contact->detailContact($id);
+        if ($contact) {
+            if ($contact->status == Config::CONTACT_CANCEL) {
+                return StatusCode::CONTACT_CANCELED;
+            }
+
+            if ($contact->status >= Config::CONTACT_CONTRACT) {
+                return StatusCode::CONTACT_NOT_CANCEL;
+            }
+
+            $contactStt = $this->repositoty_contact->getContactStatus(Config::CONTACT_CANCEL);
+
+            $contactContent = unserialize($contact->ct_content);
+            $contactContent[$contactStt->stt_name] = [
+                'date_process' => date("Y/m/d"),
+                'date_update' => date("Y/m/d"),
+                'content' => 'Đóng liên hệ',
+            ];
+
+            $contact->status = Config::CONTACT_CANCEL;
+            $contact->ct_content = serialize($contactContent);
+            $contact->save();
+            return StatusCode::STATUS_SUCCESS;
+        }
+        return StatusCode::STATUS_ERROR;
     }
 
     public function deleteContact($id): bool

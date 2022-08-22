@@ -15,4 +15,8 @@ class StatusCode
     const CATE_HAS_PRODUCT = 301;
 
     const CATE_DELETED = 311;
+
+    const CONTACT_UPDATED = 321;
+    const CONTACT_CANCELED = 322;
+    const CONTACT_NOT_CANCEL = 323;
 }
