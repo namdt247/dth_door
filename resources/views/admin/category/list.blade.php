@@ -20,7 +20,7 @@
                             <h1 class="page-title">Quản lý danh mục</h1>
                         </div>
                         <div class="col-md-6 text-md-right">
-                            <a href="/admin/cate/add" class="btn btn-outline-secondary" type="submit">
+                            <a href="/admin/cate/add" class="btn btn-outline-primary" type="submit">
                                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 Thêm mới
                             </a>
@@ -38,27 +38,31 @@
                                         <th>Name</th>
                                         <th>Description</th>
                                         <th>Created At</th>
-                                        <th class="text-center">Action</th>
+                                        <th class="text-center"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($lstCate as $cate)
                                         <tr>
                                             <td class="align-middle">
-                                                <b>{!! ++$loop->index !!}</b>
+                                                <code>{!! ++$loop->index !!}</code>
                                             </td>
                                             <td class="align-middle">
-                                                {!! $cate->name !!}
+                                                <a href="/admin/cate/detail?cateId={!! $cate->id !!}">
+                                                    {!! $cate->name !!}
+                                                </a>
                                             </td>
                                             <td class="align-middle">
                                                 @if(is_null($cate->note))
-                                                    <i class="text-gray">Không có thông tin mô tả</i>
+                                                    <code class="text-gray"><i>Không có thông tin mô tả</i></code>
                                                 @else
-                                                    {!! $cate->note !!}
+                                                    <code>{!! $cate->note !!}</code>
                                                 @endif
                                             </td>
                                             <td class="align-middle">
-                                                {!! date("d/m/Y", strtotime($cate->created_at)); !!}
+                                                <span class="badge badge-subtle badge-success">
+                                                    {!! date("d/m/Y", strtotime($cate->created_at)); !!}
+                                                </span>
                                             </td>
                                             <td class="align-middle text-center" width="90px">
                                                 <a href="/admin/cate/detail?cateId={!! $cate->id !!}" class="btn btn-sm btn-icon btn-secondary">

@@ -9,6 +9,8 @@ class Config {
 
     const TYPE_NORMAL = 1;
 
+    const ROLE_NORMAL = 4;
+
     const NUMBER_PER_PAGE_CUSTOMER = 6;
     const NUMBER_PER_PAGE_ADMIN = 10;
 

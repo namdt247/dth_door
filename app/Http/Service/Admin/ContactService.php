@@ -54,4 +54,8 @@ class ContactService extends AdminService
     public function getTotalContactPending() {
         return $this->repositoty_contact->getTotalContactInPending();
     }
+
+    public function listContactStatus() {
+        return $this->repositoty_contact->listContactStatus();
+    }
 }

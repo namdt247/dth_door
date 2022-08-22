@@ -30,24 +30,34 @@
                                         <th>FullName</th>
                                         <th>Phone</th>
                                         <th>Message</th>
+                                        <th>Created At</th>
                                         <th>Status</th>
-                                        <th class="text-center">Action</th>
+                                        <th class="text-center"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($lstContact as $contact)
                                         <tr>
                                             <td class="align-middle">
-                                                <b>{!! ++$loop->index !!}</b>
+                                                <code>{!! ++$loop->index !!}</code>
                                             </td>
                                             <td class="align-middle">
-                                                {!! $contact->fullName !!}
+                                                <a href="/admin/contact/detail?contactId={!! $contact->id !!}">
+                                                    {!! $contact->fullName !!}
+                                                </a>
                                             </td>
                                             <td class="align-middle">
-                                                {!! $contact->phone !!}
+                                                <span class="badge badge-subtle badge-primary">
+                                                    {!! $contact->phone !!}
+                                                </span>
                                             </td>
-                                            <td class="align-middle" width="35%">
-                                                {!! $contact->message !!}
+                                            <td class="align-middle" width="30%">
+                                                <code>{!! $contact->message !!}</code>
+                                            </td>
+                                            <td class="align-middle">
+                                                <span class="badge badge-subtle badge-success">
+                                                    {!! date("d/m/Y", strtotime($contact->created_at)); !!}
+                                                </span>
                                             </td>
                                             <td class="align-middle">
                                                 @if(assert($contact->status_parent))

@@ -25,3 +25,7 @@ a.btn-outline-secondary:hover {
     box-shadow: none;
     color: #363642;
 }
+
+.text-table-primary {
+    color: #4e73df !important;
+}

@@ -30,24 +30,34 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Role</th>
-                                            <th class="text-center">Action</th>
+                                            <th>Status</th>
+                                            <th class="text-center"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($lstUser as $user)
                                         <tr>
                                             <td class="align-middle">
-                                                <b>{!! ++$loop->index !!}</b>
+                                                <code>{!! ++$loop->index !!}</code>
                                             </td>
                                             <td class="align-middle">
-                                                {!! $user->full_name !!}
+                                                <a href="#">{!! $user->full_name !!}</a>
                                             </td>
                                             <td class="align-middle">
-                                                {!! $user->email !!}
+                                                <code>
+                                                    {!! $user->email !!}
+                                                </code>
+                                            </td>
+                                            <td class="align-middle">
+                                                @if($user->user_role === \App\Helper\Config::ROLE_NORMAL)
+                                                    <span class="badge badge-subtle badge-primary">User</span>
+                                                @else
+                                                    <span class="badge badge-subtle badge-primary">Admin</span>
+                                                @endif
                                             </td>
                                             <td class="align-middle">
                                                 @if($user->status === \App\Helper\Config::STATUS_ACTIVE)
-                                                    <span class="badge badge-subtle badge-primary">Active</span>
+                                                    <span class="badge badge-success">Active</span>
                                                 @endif
                                             </td>
                                             <td class="align-middle text-center" width="90px">

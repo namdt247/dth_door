@@ -31,26 +31,34 @@
                                         <th>Position</th>
                                         <th>Content</th>
                                         <th>Created At</th>
-                                        <th class="text-center">Action</th>
+                                        <th class="text-center"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($lstFeedback as $feedback)
                                         <tr>
                                             <td class="align-middle">
-                                                <b>{!! ++$loop->index !!}</b>
+                                                <code>{!! ++$loop->index !!}</code>
                                             </td>
                                             <td class="align-middle">
-                                                {!! $feedback->fb_name !!}
+                                                <a href="/admin/feedback/detail?feedbackId={!! $feedback->id !!}">
+                                                    {!! $feedback->fb_name !!}
+                                                </a>
                                             </td>
                                             <td class="align-middle">
-                                                {!! $feedback->fb_position !!}
+                                                <span class="badge badge-subtle badge-primary">
+                                                    {!! $feedback->fb_position !!}
+                                                </span>
                                             </td>
                                             <td class="align-middle" width="45%">
-                                                {!! $feedback->fb_content !!}
+                                                <code>
+                                                    {!! $feedback->fb_content !!}
+                                                </code>
                                             </td>
                                             <td class="align-middle">
-                                                {!! date("d/m/Y", strtotime($feedback->created_at)); !!}
+                                                <span class="badge badge-subtle badge-success">
+                                                    {!! date("d/m/Y", strtotime($feedback->created_at)); !!}
+                                                </span>
                                             </td>
                                             <td class="align-middle text-center" width="90px">
                                                 <a href="/admin/feedback/detail?feedbackId={!! $feedback->id !!}" class="btn btn-sm btn-icon btn-secondary">

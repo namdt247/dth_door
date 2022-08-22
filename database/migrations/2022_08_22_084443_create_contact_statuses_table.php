@@ -18,7 +18,7 @@ class CreateContactStatusesTable extends Migration
             $table->string('stt_name');
             $table->string('stt_nameAction');
             $table->integer('stt_order');
-            $table->integer('stt_status')->default(1);
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
     }

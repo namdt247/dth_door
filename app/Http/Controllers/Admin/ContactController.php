@@ -23,7 +23,11 @@ class ContactController extends Controller
     public function getDetailContact(Request $request)
     {
         $contact = $this->contactService->detailContact($request);
-        return view('/admin/contact/detail', compact('contact'));
+        $lstContactStatus = $this->contactService->listContactStatus();
+        if ($contact) {
+            return view('/admin/contact/detail', compact('contact', 'lstContactStatus'));
+        }
+        return redirect('/admin/contact/list')->with(['message_error' => Message::MESSAGE_RECORD_NOT_FOUND]);
     }
 
     public function updateContact(Request $request)
@@ -36,9 +40,12 @@ class ContactController extends Controller
 
     public function deleteContact($id)
     {
-        if ($id && $this->contactService->deleteContact($id)) {
-            return redirect('/admin/contact/list')->with(['message_success' => Message::MESSAGE_DELETE_SUCCESS]);
+        if ($id) {
+            if ($this->contactService->deleteContact($id)) {
+                return redirect('/admin/contact/list')->with(['message_success' => Message::MESSAGE_DELETE_SUCCESS]);
+            }
+            return redirect('/admin/contact/list')->with(['message_error' => Message::MESSAGE_RECORD_NOT_FOUND]);
         }
-        return redirect('/admin/contact/list')->with(['message_error' => Message::MESSAGE_DELETE_FAILED]);
+        return redirect('/admin/contact/list')->with(['message_error' => Message::MESSAGE_ERROR]);
     }
 }

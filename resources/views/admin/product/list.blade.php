@@ -20,7 +20,7 @@
                             <h1 class="page-title">Quản lý sản phẩm</h1>
                         </div>
                         <div class="col-md-6 text-md-right">
-                            <a href="/admin/product/add" class="btn btn-outline-secondary" type="submit">
+                            <a href="/admin/product/add" class="btn btn-outline-primary" type="submit">
                                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 Thêm mới
                             </a>
@@ -39,20 +39,24 @@
                                         <th>Category</th>
                                         <th>Thumbnail</th>
                                         <th>Created At</th>
-                                        <th class="text-center">Action</th>
+                                        <th class="text-center"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($lstPrd as $prd)
                                         <tr>
                                             <td class="align-middle">
-                                                <b>{!! ++$loop->index !!}</b>
+                                                <code>{!! ++$loop->index !!}</code>
                                             </td>
                                             <td class="align-middle" width="25%">
-                                                {!! $prd->name !!}
+                                                <a href="/admin/product/detail?prdId={!! $prd->id !!}">
+                                                    {!! $prd->name !!}
+                                                </a>
                                             </td>
                                             <td class="align-middle">
-                                                {!! $prd->category->name !!}
+                                                <span class="badge badge-subtle badge-primary">
+                                                    {!! $prd->category->name !!}
+                                                </span>
                                             </td>
                                             <td class="align-middle">
                                                 @if($prd->thumbnail == null || strlen($prd->thumbnail) == 0)
@@ -71,7 +75,9 @@
                                                 @endif
                                             </td>
                                             <td class="align-middle">
-                                                {!! date("d/m/Y", strtotime($prd->created_at)); !!}
+                                                <span class="badge badge-subtle badge-success">
+                                                    {!! date("d/m/Y", strtotime($prd->created_at)); !!}
+                                                </span>
                                             </td>
                                             <td class="align-middle text-center" width="90px">
                                                 <a href="/admin/product/detail?prdId={!! $prd->id !!}" class="btn btn-sm btn-icon btn-secondary">

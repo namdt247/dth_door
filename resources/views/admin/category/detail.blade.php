@@ -10,6 +10,9 @@
                             <li class="breadcrumb-item">
                                 <a href="/admin/dashboard"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
                             </li>
+                            <li class="breadcrumb-item">
+                                <a href="/admin/cate/list"> Danh mục </a>
+                            </li>
                             <li class="breadcrumb-item active">
                                 <a href="#">Chi tiết danh mục</a>
                             </li>
