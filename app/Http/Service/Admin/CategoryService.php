@@ -22,9 +22,17 @@ class CategoryService extends AdminService
     }
 
     public function createCate(Request $request) {
+        $arrImg = $request->thumbnails;
+        $thumbnail = '';
+        if ($arrImg) {
+            foreach ($arrImg as $img) {
+                $thumbnail .= $img . ',';
+            }
+        }
         $data = [
             'name' => $request->name,
-            'note' => $request->note
+            'note' => $request->note,
+            'thumbnail' => $thumbnail,
         ];
         return $this->repositoty_category->createCate($data);
     }
@@ -38,9 +46,17 @@ class CategoryService extends AdminService
     {
         $id = $request->query('cateId');
         $cate = $this->repositoty_category->detailCate($id);
+        $thumbnail = '';
         if ($cate) {
+            $arrImg = $request->thumbnails;
+            if ($arrImg) {
+                foreach ($arrImg as $img) {
+                    $thumbnail .= $img . ',';
+                }
+            }
             $cate->name = $request->name;
             $cate->note = $request->note;
+            $cate->thumbnail = $thumbnail;
             return $cate->save();
         }
         return false;

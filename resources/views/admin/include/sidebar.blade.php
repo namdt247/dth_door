@@ -92,6 +92,20 @@
                     </li>
                     <!-- /.menu-item -->
 
+                    <!-- .menu-item -->
+                    <li class="menu-item has-child {{ request()->is('admin/project/*') ? 'has-active' : '' }}">
+                        <a href="#" class="menu-link"><span class="menu-icon fa fa-calendar"></span> <span class="menu-text">Công trình</span></a> <!-- child menu -->
+                        <ul class="menu">
+                            <li class="menu-item {{ request()->is('admin/project/list') ? 'has-active' : '' }}">
+                                <a href="/admin/project/list" class="menu-link">Danh sách</a>
+                            </li>
+                            <li class="menu-item {{ request()->is('admin/project/add') ? 'has-active' : '' }}">
+                                <a href="/admin/project/add" class="menu-link">Thêm mới</a>
+                            </li>
+                        </ul><!-- /child menu -->
+                    </li>
+                    <!-- /.menu-item -->
+
                     <!-- .menu-header -->
                     <li class="menu-header">Contact</li>
                     <!-- /.menu-header -->

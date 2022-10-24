@@ -20,12 +20,16 @@ class ProductService extends AdminService
     public function createProduct(Request $request) {
         $cateId = $request->category_id;
         $cate = $this->repositoty_category->detailCate($cateId);
+        $thumbnail = '';
         if ($cate) {
             $arrImg = $request->thumbnails;
-            $thumbnail = '';
-            foreach ($arrImg as $img) {
-                $thumbnail .= $img . ',';
+
+            if ($arrImg) {
+                foreach ($arrImg as $img) {
+                    $thumbnail .= $img . ',';
+                }
             }
+
             $data = [
                 'category_id' => $request->category_id,
                 'name' => $request->name,
@@ -51,11 +55,13 @@ class ProductService extends AdminService
     {
         $id = $request->query('prdId');
         $product = $this->repository_product->detailProduct2($id);
+        $thumbnail = '';
         if ($product) {
             $arrImg = $request->thumbnails;
-            $thumbnail = '';
-            foreach ($arrImg as $img) {
-                $thumbnail .= $img . ',';
+            if ($arrImg) {
+                foreach ($arrImg as $img) {
+                    $thumbnail .= $img . ',';
+                }
             }
 
             $product->name = $request->name;

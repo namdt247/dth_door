@@ -11,11 +11,11 @@
                                 <a href="/admin/dashboard"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                <a href="#">Thêm mới danh mục</a>
+                                <a href="#">Thêm mới công trình</a>
                             </li>
                         </ol>
                     </nav>
-                    <h1 class="page-title"> Thêm mới danh mục </h1>
+                    <h1 class="page-title"> Thêm mới công trình </h1>
                 </header>
                 <div class="page-section">
                     <div id="base-style" class="card">
@@ -25,18 +25,28 @@
                                 <div class="row">
                                     <div class="col-md-7">
                                         <div class="form-group">
-                                            <label for="tf1"> Tên danh mục <span class="text-danger">(*)</span></label>
+                                            <label for="tf1"> Tên công trình <span class="text-danger">(*)</span></label>
                                             <input type="text" name="name" class="form-control" aria-describedby="tf1Help" placeholder="Tên danh mục sản phẩm" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="tf6">Mô tả</label>
-                                            <textarea class="form-control" name="note" rows="6" placeholder="Nhập mô tả..."></textarea>
+                                            <label for="category_id"> Loại công trình <span class="text-danger">(*)</span></label>
+                                            <select class="form-control" name="type">
+                                                <option value="1" class="form-control">
+                                                    Nhà dân
+                                                </option>
+                                                <option value="2" class="form-control">
+                                                    Biệt thự
+                                                </option>
+                                                <option value="3" class="form-control">
+                                                    Công trình khác
+                                                </option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-md-5">
                                         <div class="form-group">
-                                            <label for="tf1"> Hình ảnh danh mục <span class="text-danger">(*)</span></label>
-                                            <div class="form-group" id="cate_form">
+                                            <label for="tf1"> Hình ảnh công trình <span class="text-danger">(*)</span></label>
+                                            <div class="form-group" id="project_form">
                                                 <div class="thumbnails">
                                                 </div>
                                                 <label type="button" class="btn btn-outline-success">
@@ -50,7 +60,7 @@
                                 </div>
                                 <div class="form-actions d-flex justify-content-center">
                                     <button class="btn btn-primary mr-1" type="submit">Create</button>
-                                    <a href="/admin/cate/list" class="btn btn-outline-primary" type="submit">
+                                    <a href="/admin/project/list" class="btn btn-outline-primary" type="submit">
                                         Cancel
                                     </a>
                                 </div>
@@ -73,7 +83,7 @@
                 resourceType: "image",
                 clientAllowedFormats: ["png", "jpeg", "gif"],
                 maxImageFileSize: 5*1024*1024,
-                form: '#cate_form',
+                form: '#project_form',
                 fieldName: 'thumbnails[]',
                 thumbnails: '.thumbnails'
             }, function (error, result) {

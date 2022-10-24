@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\FeedbackController;
+use App\Http\Controllers\Admin\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,17 @@ Route::group([
         Route::get('/detail', [ProductController::class, 'detailProduct']);
         Route::post('/detail', [ProductController::class, 'updateProduct']);
         Route::get('/delete/{id}', [ProductController::class, 'deleteProduct']);
+    });
+    # endregion
+
+    # region project
+    Route::group(['prefix' => 'project'], function(){
+        Route::get('/list', [ProjectController::class, 'getListProjectPagination']);
+        Route::get('/add', [ProjectController::class, 'getAddProject']);
+        Route::post('/add', [ProjectController::class, 'createProject']);
+        Route::get('/detail', [ProjectController::class, 'getDetailProject']);
+        Route::post('/detail', [ProjectController::class, 'updateProject']);
+        Route::get('/delete/{id}', [ProjectController::class, 'deleteProject']);
     });
     # endregion
 

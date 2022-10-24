@@ -9,7 +9,7 @@
                 @if($count < 8)
                     <a href="/list-products?cateId={!! $cate->id !!}" class="wrap-sidebar-cate d-flex align-items-center">
                         @if($cate->thumbnail)
-                            <img class="cate-thumbnail mr-2" src="{!! $cate->thumbnail !!}" alt="">
+                            <img class="cate-thumbnail mr-2" src="{!! $cate->last_large_photo !!}" alt="">
                         @else
                             <img class="cate-thumbnail mr-2" src="/frontend/images/cate_default.png" alt="">
                         @endif
