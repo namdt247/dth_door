@@ -32,7 +32,7 @@
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
 {{--                                        <span onclick="redirectListCate()">Sản phẩm </span>--}}
-                                        Sản phẩm
+                                        Danh mục sản phẩm
                                         <i class="fa fa-angle-down"></i>
                                     </a>
                                     <ul class="dropdown-menu" role="menu">

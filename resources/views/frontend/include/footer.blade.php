@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-4 col-md-6 footer-widget footer-about">
-                    <h3 class="widget-title">Liên hệ</h3>
+                    <h3 class="widget-title">Thông tin</h3>
 {{--                    <img loading="lazy" width="150px" class="footer-logo" src="/frontend/images/footer-logo.png"--}}
 {{--                         alt="Constra">--}}
 {{--                    <p>--}}
@@ -55,15 +55,9 @@
                     </div>
                 </div><!-- Col end -->
 
-                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
-                    <h3 class="widget-title">Dịch vụ</h3>
-                    <ul class="list-arrow">
-                        <li><a href="#">Tư vấn</a></li>
-                        <li><a href="#">Thiết kế</a></li>
-                        <li><a href="#">Sản xuất</a></li>
-                        <li><a href="#">Thi công</a></li>
-                        <li><a href="#">Hoàn thiện</a></li>
-                    </ul>
+                <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 footer-widget">
+                    <h3 class="widget-title">Fanpage DTHDoor</h3>
+                    <div class="fb-page" data-href="https://www.facebook.com/dthdoor68" data-tabs="timeline" data-width="" data-height="320" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/dthdoor68" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/dthdoor68">Nhôm Kính DTH</a></blockquote></div>
                 </div><!-- Col end -->
             </div><!-- Row end -->
         </div><!-- Container end -->
@@ -72,14 +66,14 @@
     <div class="copyright" style="padding: 16px">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="copyright-info text-center text-md-left">
-                            <span>Copyright &copy;
-                                <script>
-                                    document.write(new Date().getFullYear())
-                                </script>,
-                                Designed &amp; Developed by DTHDoor
-                            </span>
+                <div class="col-12">
+                    <div class="copyright-info text-center text-md-center">
+                        <span>Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>,
+                            Designed &amp; Developed by DTHDoor
+                        </span>
                     </div>
                 </div>
             </div><!-- Row end -->

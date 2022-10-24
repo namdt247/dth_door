@@ -104,7 +104,7 @@
                 multiple: true,
                 resourceType: "image",
                 clientAllowedFormats: ["png", "jpeg", "gif"],
-                maxImageFileSize: 3*1024*1024,
+                maxImageFileSize: 5*1024*1024,
                 form: '#product_form',
                 fieldName: 'thumbnails[]',
                 thumbnails: '.thumbnails'

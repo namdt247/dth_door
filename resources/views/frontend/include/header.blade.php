@@ -59,7 +59,20 @@
 
                         <div id="navbar-collapse" class="collapse navbar-collapse">
                             <ul class="nav navbar-nav mr-auto">
-                                <li class="nav-item active">
+                                <?php $lstCate = \App\Models\Category::where(\App\Helper\Query::STATUS, \App\Helper\Query::NOT_EQUAL, \App\Helper\Config::STATUS_DELETED)->orderby(\App\Helper\Query::CREATED_AT, \App\Helper\Query::ORDER_BY_ASC)->get() ?>
+                                <li class="nav-item active dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                        Danh mục sản phẩm <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/list-cate">Tất cả</a></li>
+                                        @foreach($lstCate as $cate)
+                                            <li><a href="/list-products?cateId={!! $cate->id !!}">{!! $cate->name !!}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
                                     <a href="/" class="nav-link">
                                         Trang chủ
                                     </a>
@@ -69,19 +82,6 @@
                                     <a href="/about-us" class="nav-link">
                                         Giới thiệu
                                     </a>
-                                </li>
-
-                                <?php $lstCate = \App\Models\Category::where(\App\Helper\Query::STATUS, \App\Helper\Query::NOT_EQUAL, \App\Helper\Config::STATUS_DELETED)->orderby(\App\Helper\Query::CREATED_AT, \App\Helper\Query::ORDER_BY_ASC)->get() ?>
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                                        Sản phẩm <i class="fa fa-angle-down"></i>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="/list-cate">Tất cả</a></li>
-                                        @foreach($lstCate as $cate)
-                                            <li><a href="/list-products?cateId={!! $cate->id !!}">{!! $cate->name !!}</a></li>
-                                        @endforeach
-                                    </ul>
                                 </li>
 
                                 <li class="nav-item">

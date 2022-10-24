@@ -80,7 +80,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 7,
-                'category_id' => 3,
+                'category_id' => 2,
                 'name' => 'Phụ kiện Kin Long (Cửa kính)',
                 'title' => '',
                 'thumbnail' => 'dth_door/prd-50_b6amir,dth_door/prd-51_jpuygv,dth_door/prd-52_gkkxw9,dth_door/prd-53_smorrs,dth_door/prd-54_z26m77',
@@ -90,7 +90,17 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 8,
-                'category_id' => 3,
+                'category_id' => 1,
+                'name' => 'Phụ kiện VVP',
+                'title' => 'Phụ kiện kính cường lực VVP là dòng sản phẩm thông nhất bậc nhất tại thị trường Việt Nam hiện nay. Bài viết này sẽ giúp khách hàng nắm rõ về phụ kiện của một bộ phụ kiện cửa kính cường lực VVP và mã sản phẩm của từng loại',
+                'thumbnail' => 'dth_door/prd-33_odnrqp,dth_door/prd-34_qqzrs7,dth_door/prd-35_csytwy,dth_door/prd-36_eaaguc,dth_door/prd-37_jchbkg,dth_door/prd-38_dzgkdc,dth_door/prd-39_btyxxm',
+                'description' => '<ul class="list-arrow"><li>Bản lề sàn VVP: tùy theo kích thước cửa và trọng lượng cửa sử dụng các loại bản lề sàn khác nhau:<ul class="list-arrow pl-3"><li>Đối với cửa kính VVP trọng lượng < 105kg, kích thước cửa: 1.0-1.15m bản lề sàn phù hợp là VVP FC34-15</li><li>Đối với  cửa kính VVP trọng lượng < 105kg, kích thước cửa: < 1.0m bản lề sàn phù hợp là VVP FC34-20</li><li>Đối với  cửa kính VVP trọng lượng < 150 kg, kích thước cửa: 1.0m-1.15m bản lề sàn phù hợp là VVP FC34-2</li></ul></li><li>Kẹp khóa VVP (mã sản phẩm: VVP FL50)</li></ul>',
+                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+            ],
+            [
+                'id' => 9,
+                'category_id' => 1,
                 'name' => 'Phụ kiện VVP',
                 'title' => 'Phụ kiện kính cường lực VVP là dòng sản phẩm thông nhất bậc nhất tại thị trường Việt Nam hiện nay. Bài viết này sẽ giúp khách hàng nắm rõ về phụ kiện của một bộ phụ kiện cửa kính cường lực VVP và mã sản phẩm của từng loại',
                 'thumbnail' => 'dth_door/prd-33_odnrqp,dth_door/prd-34_qqzrs7,dth_door/prd-35_csytwy,dth_door/prd-36_eaaguc,dth_door/prd-37_jchbkg,dth_door/prd-38_dzgkdc,dth_door/prd-39_btyxxm',

@@ -49,9 +49,17 @@
                                                 <i class="fa fa-star" aria-hidden="true"></i>
                                                 <i class="fa fa-star" aria-hidden="true"></i>
                                             </div>
-                                            <h3 class="service-box-title mt-2 mb-0">
+                                            <div class="service-box-title-custom mt-2 mb-1">
                                                 <a href="{!! route('user.detailProduct', $prd->id) !!}">{!! $prd->name !!}</a>
-                                            </h3>
+                                            </div>
+                                            <div>
+                                                <span><b>Giá: </b></span>
+                                                @if($prd->price)
+                                                    <span class="product-price-text-2">{!! number_format($prd->price, 0, '', ',') !!}đ</span>
+                                                @else
+                                                    <span class="product-price-text-2">Liên hệ</span>
+                                                @endif
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

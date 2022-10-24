@@ -36,6 +36,42 @@ class CategorySeeder extends Seeder
                 'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
             ],
+            [
+                'id' => 4,
+                'name' => 'Phụ kiện cửa kính',
+                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'id' => 5,
+                'name' => 'Phụ kiện cửa kính',
+                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'id' => 6,
+                'name' => 'Phụ kiện cửa kính',
+                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'id' => 7,
+                'name' => 'Phụ kiện cửa kính',
+                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'id' => 8,
+                'name' => 'Phụ kiện cửa kính',
+                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
+            ],
+            [
+                'id' => 9,
+                'name' => 'Phụ kiện cửa kính',
+                'created_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => \Illuminate\Support\Carbon::now()->format('Y-m-d H:i:s')
+            ],
         ]);
         if (env('DB_CONNECTION') == 'mysql') {
             \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS = 1');

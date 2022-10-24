@@ -13,16 +13,19 @@ class UserController extends Controller
 {
     protected $homeService;
     protected $contactService;
+    protected $cateService;
 
     public function __construct(){
         $this->homeService = new HomeService();
         $this->contactService = new ContactService();
+        $this->cateService = new CategoryService();
     }
 
     public function homePage()
     {
         $lstProductNewest = $this->homeService->getListProductNewest();
-        return view('frontend.home', compact('lstProductNewest'));
+        $lstCate = $this->cateService->getListCate();
+        return view('frontend.home', compact('lstProductNewest', 'lstCate'));
     }
 
     public function aboutUs()

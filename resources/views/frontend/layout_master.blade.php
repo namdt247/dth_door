@@ -56,6 +56,9 @@
     <!-- Footer -->
     @include('frontend.include.footer')
 
+    <!-- Call action -->
+    @include('frontend.include.call')
+
     <!-- Javascript Files
     ================================================== -->
 
@@ -83,6 +86,10 @@
     <script src="/frontend/js/main.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Facebook js -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0&appId=811295712649303&autoLogAppEvents=1" nonce="XrOOKnaV"></script>
 
     <!-- Script custom -->
     @yield('main-script')

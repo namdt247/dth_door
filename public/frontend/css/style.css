@@ -1010,7 +1010,7 @@ ul.navbar-nav > li > a {
   text-align: left;
   background: #fff;
   z-index: 100;
-  min-width: 200px;
+  min-width: 260px;
   border-radius: 0;
   border: 0;
   border-top: 2px solid #ffb600;
@@ -1240,7 +1240,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 ================================================== */
 /*-- Main slide --*/
 .banner-carousel .banner-carousel-item {
-  height: 700px;
+  height: 450px;
   color: #fff;
   background-position: 50% 50%;
   background-size: cover;
@@ -1727,7 +1727,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .ts-service-box .ts-service-box-info {
   margin-left: 25px;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 
 .service-box-title {
@@ -1755,7 +1755,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: #fff;
 }
 
-/* Service box 
+/* Service box
 
 .ts-service-box .ts-service-icon i {
   font-size: 24px;
@@ -2594,7 +2594,7 @@ img.testimonial-thumb {
 }
 
 #back-to-top {
-  right: 40px;
+  left: 15px;
   top: auto;
   z-index: 10;
   display: none;
@@ -2607,7 +2607,7 @@ img.testimonial-thumb {
 
 @media (max-width: 767px) {
   #back-to-top {
-    right: 15px;
+    left: 15px;
   }
 }
 
