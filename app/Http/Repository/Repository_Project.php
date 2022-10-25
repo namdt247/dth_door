@@ -16,6 +16,7 @@ class Repository_Project
     public function getListProject() {
         return Project::where(Query::STATUS, Query::NOT_EQUAL, Config::STATUS_DELETED)
             ->orderby(Query::CREATED_AT, Query::ORDER_BY_DESC)
+            ->take(4)
             ->get();
     }
 

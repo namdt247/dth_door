@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Service\Frontend\CategoryService;
 use App\Http\Service\Frontend\ContactService;
 use App\Http\Service\Frontend\HomeService;
+use App\Http\Service\Frontend\ProjectService;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -14,18 +15,21 @@ class UserController extends Controller
     protected $homeService;
     protected $contactService;
     protected $cateService;
+    protected $projectService;
 
     public function __construct(){
         $this->homeService = new HomeService();
         $this->contactService = new ContactService();
         $this->cateService = new CategoryService();
+        $this->projectService = new ProjectService();
     }
 
     public function homePage()
     {
         $lstProductNewest = $this->homeService->getListProductNewest();
         $lstCate = $this->cateService->getListCate();
-        return view('frontend.home', compact('lstProductNewest', 'lstCate'));
+        $lstProject = $this->projectService->getListProject();
+        return view('frontend.home', compact('lstProductNewest', 'lstCate', 'lstProject'));
     }
 
     public function aboutUs()

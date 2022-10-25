@@ -1248,7 +1248,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 @media (max-width: 991px) {
   .banner-carousel .banner-carousel-item {
-    height: 550px;
+    height: 450px;
   }
 }
 
@@ -2454,10 +2454,10 @@ img.testimonial-thumb {
 }
 
 .latest-post .post-title {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 24px;
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .latest-post .post-title a {
@@ -2470,7 +2470,7 @@ img.testimonial-thumb {
 
 .latest-post-meta {
   font-size: 13px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .latest-post .post-body {

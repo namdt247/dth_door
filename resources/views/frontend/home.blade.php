@@ -26,13 +26,13 @@
                 @foreach($lstCate as $cate)
                     <?php $lstPrd = $cate->product; ?>
 
-                    @if(!empty($lstPrd) && count($lstPrd) >= 3 && $countCate < 3)
+                    @if(!empty($lstPrd) && count($lstPrd) >= 4 && $countCate < 3)
                         <?php $countCate++; ?>
                         <h4 class="title-cate pb-1 mb-4">
                             {!! $cate->name !!}
                             <button class="slick-next slick-arrow" aria-label="Next" type="button" style="" aria-disabled="false">Next</button>
                         </h4>
-                        <div class="px-3 mb-md-5 mb-3">
+                        <div class="px-3 mb-md-5 mb-4">
                             <div class="cate-slick">
                                 @foreach($lstPrd as $prd)
                                     <div class="m-2">

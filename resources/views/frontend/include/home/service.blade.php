@@ -1,5 +1,5 @@
 <div id="ts-service-area" class="ts-service-area wrap-child-component pb-0">
-    <div class="container">
+    <div class="container pt-md-2 pt-3">
 {{--        <div class="row text-center">--}}
 {{--            <div class="col-12">--}}
 {{--                <h2 class="section-title">Dịch vụ của chúng tôi</h2>--}}

@@ -1,6 +1,6 @@
 <section class="call-to-action-box no-padding d-md-block d-none">
     <div class="container">
-        <div class="action-style-box">
+        <div class="action-style-box mx-4">
             <div class="row align-items-center">
                 <div class="col-md-8 text-center text-md-left">
                     <div class="call-to-action-text">
