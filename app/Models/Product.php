@@ -10,7 +10,7 @@ class Product extends Model
     use HasFactory;
 
     protected $appends = ['category'];
-    protected $fillable = ['category_id', 'name', 'title', 'thumbnail', 'description', 'type'];
+    protected $fillable = ['category_id', 'name', 'title', 'thumbnail', 'description', 'price', 'type'];
 
     private static $cloudinary_link = 'https://res.cloudinary.com/tena2472/image/upload/v1650096971/';
 

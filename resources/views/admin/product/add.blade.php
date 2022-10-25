@@ -42,6 +42,10 @@
                                             <label for="title">Tiêu đề sản phẩm</label>
                                             <textarea class="form-control" name="title" rows="5" placeholder="Nhập tiêu đề mô tả ngắn về sản phẩm..."></textarea>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="name"> Giá sản phẩm <span class="text-danger">(*)</span></label>
+                                            <input type="number" name="price" class="form-control" aria-describedby="tf1Help" placeholder="Giá sản phẩm" required>
+                                        </div>
                                     </div>
                                     <div class="col-md-5">
                                         <div class="form-group">

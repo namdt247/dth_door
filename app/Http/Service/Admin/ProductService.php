@@ -36,6 +36,7 @@ class ProductService extends AdminService
                 'title' => $request->title,
                 'thumbnail' => $thumbnail,
                 'description' => $request->description,
+                'price' => $request->price,
                 'type' => Config::TYPE_NORMAL
             ];
             if ($this->repository_product->createProduct($data)) {
@@ -68,6 +69,7 @@ class ProductService extends AdminService
             $product->title = $request->title;
             $product->thumbnail = $thumbnail;
             $product->description = $request->description;
+            $product->price = $request->price;
             return $product->save();
         }
         return false;

@@ -24,3 +24,10 @@ function confirmDeleteProduct(el) {
         window.location = `/admin/product/delete/${idProduct}`;
     }
 }
+
+function confirmDeleteProject(el) {
+    if (confirm("Bạn có chắc chắn muốn xóa?")) {
+        const idProduct = $(el).attr('data-id');
+        window.location = `/admin/project/delete/${idProduct}`;
+    }
+}

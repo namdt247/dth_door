@@ -81,7 +81,7 @@
                                                 <a href="/admin/project/detail?projectId={!! $project->id !!}" class="btn btn-sm btn-icon btn-secondary">
                                                     <i class="fa fa-pencil-alt"></i> <span class="sr-only">Detail</span>
                                                 </a>
-                                                <a href="#" data-id="{!! $project->id !!}" class="btn btn-sm btn-icon btn-secondary" onclick="confirmDeleteCate(this);">
+                                                <a href="#" data-id="{!! $project->id !!}" class="btn btn-sm btn-icon btn-secondary" onclick="confirmDeleteProject(this);">
                                                     <i class="far fa-trash-alt"></i> <span class="sr-only">Remove</span>
                                                 </a>
                                             </td>
