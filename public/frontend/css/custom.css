@@ -184,12 +184,30 @@
 
 .fixed-contact-icons {
     position: fixed;
-    bottom: 100px;
+    bottom: 145px;
     z-index: 9;
     right: 15px;
 }
 
 .fixed-tel {
+    right: 15px;
+    bottom: 100px;
+    position: fixed;
+    display: inline-block;
+    min-width: 70px;
+    height: 40px;
+    line-height: 40px;
+    background: #f00;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 125%;
+    border-radius: 25px;
+    padding: 0 10px 0 15px;
+    box-shadow: 0 0 3px #fff;
+    z-index: 999;
+}
+
+.fixed-tel-2 {
     right: 15px;
     bottom: 55px;
     position: fixed;
@@ -207,7 +225,7 @@
     z-index: 999;
 }
 
-.fixed-tel-2 {
+.fixed-tel-3 {
     right: 15px;
     bottom: 10px;
     position: fixed;

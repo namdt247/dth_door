@@ -5,7 +5,7 @@
                 <div class="row align-items-center">
                     <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
                         <a class="d-block" href="/">
-                            <img loading="lazy" src="/frontend/images/logo_dth_6.png" alt="dth">
+                            <img loading="lazy" src="/frontend/images/logo_dth_7.png" alt="dth">
                         </a>
                     </div><!-- logo end -->
 

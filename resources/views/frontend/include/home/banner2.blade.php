@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-9 col-12">
             <div class="banner-carousel banner-carousel-2 mb-0">
-                <div class="banner-carousel-item" style="background-image:url(/frontend/images/slider-main/bg6.jpeg)">
+                <div class="banner-carousel-item" style="background-image:url(/frontend/images/slider-main/bg9.jpeg)">
                     <div class="container">
                         <div class="box-slider-content">
                             <div class="box-slider-text">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
 
-                <div class="banner-carousel-item" style="background-image:url(/frontend/images/slider-main/bg7.jpeg)">
+                <div class="banner-carousel-item" style="background-image:url(/frontend/images/slider-main/bg10.jpeg)">
                     <div class="slider-content text-left">
                         <div class="container">
                             <div class="box-slider-content">
@@ -59,9 +59,9 @@
                     </div>
                 </div>
 
-                <div class="banner-carousel-item" style="background-image:url(/frontend/images/slider-main/bg8.jpeg)">
-                    <div class="slider-content text-left">
-                        <div class="container">
+                <div class="banner-carousel-item" style="background-image:url(/frontend/images/slider-main/bg6.jpeg)">
+                    <div class="container">
+                        <div class="box-slider-content">
                             <div class="box-slider-content">
                                 <div class="box-slider-text">
                                     <h2 class="box-slide-title">Chất lượng hàng đầu</h2>
@@ -70,6 +70,36 @@
                                     <p><a href="/list-products" class="slider btn btn-primary" aria-label="about-us">Sản phẩm</a></p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="banner-carousel-item" style="background-image:url(/frontend/images/slider-main/bg7.jpeg)">
+                    <div class="slider-content text-left">
+                        <div class="container">
+{{--                            <div class="box-slider-content">--}}
+{{--                                <div class="box-slider-text">--}}
+{{--                                    <h2 class="box-slide-title">Dịch vụ quốc tế</h2>--}}
+{{--                                    <h3 class="box-slide-sub-title">Sự lựa chọn hoàn hảo</h3>--}}
+{{--                                    <p class="box-slide-description">Chúng tôi luôn cố gắng từng ngày để đưa đến người tiêu dùng những sản phẩm chất lượng, an toàn và thẩm mỹ</p>--}}
+{{--                                    <p><a href="/list-products" class="slider btn btn-primary" aria-label="about-us">Sản phẩm</a></p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="banner-carousel-item" style="background-image:url(/frontend/images/slider-main/bg8.jpeg)">
+                    <div class="slider-content text-left">
+                        <div class="container">
+{{--                            <div class="box-slider-content">--}}
+{{--                                <div class="box-slider-text">--}}
+{{--                                    <h2 class="box-slide-title">Chất lượng hàng đầu</h2>--}}
+{{--                                    <h3 class="box-slide-sub-title">Chất lượng tạo nên thương hiệu</h3>--}}
+{{--                                    <p class="box-slide-description">Chúng tôi luôn luôn hoàn thiện sản phẩm, dịch vụ một cách tốt nhất</p>--}}
+{{--                                    <p><a href="/list-products" class="slider btn btn-primary" aria-label="about-us">Sản phẩm</a></p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                 </div>

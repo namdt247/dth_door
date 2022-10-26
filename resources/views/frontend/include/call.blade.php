@@ -12,3 +12,6 @@
 <a class="fixed-tel-2" href="tel:0878193555">
     <i class="fa fa-phone" aria-hidden="true"></i> 087.819.3555
 </a>
+<a class="fixed-tel-3" href="tel:0963850457">
+    <i class="fa fa-phone" aria-hidden="true"></i> 0963.850.457
+</a>

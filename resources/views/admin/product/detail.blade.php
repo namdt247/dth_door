@@ -46,8 +46,8 @@
                                             <textarea class="form-control" name="title" rows="5" placeholder="Nhập tiêu đề mô tả ngắn về sản phẩm...">{!! $product->title !!}</textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label for="name"> Giá sản phẩm <span class="text-danger">(*)</span></label>
-                                            <input type="number" value="{!! $product->price !!}" name="price" class="form-control" aria-describedby="tf1Help" placeholder="Giá sản phẩm" required>
+                                            <label for="name"> Giá sản phẩm <span class="text-danger"></span></label>
+                                            <input type="number" value="{!! $product->price !!}" name="price" class="form-control" aria-describedby="tf1Help" placeholder="Giá sản phẩm">
                                         </div>
                                     </div>
                                     <div class="col-md-5">

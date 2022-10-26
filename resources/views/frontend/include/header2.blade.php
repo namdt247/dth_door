@@ -6,7 +6,7 @@
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
                         <div class="logo">
                             <a class="d-block" href="/">
-                                <img loading="lazy" src="/frontend/images/logo_dth_6.png" alt="DTH">
+                                <img loading="lazy" src="/frontend/images/logo_dth_7.png" alt="DTH">
                             </a>
                         </div><!-- logo end -->
 

@@ -12,8 +12,11 @@
                     <div>
                         <p>
                             <a href="{!! \App\Helper\CompanyInfo::LOCATION_MAP !!}" target="_blank" class="footer-map">
-                                <i class="fa fa-map-marker-alt mr-2"></i> {!! \App\Helper\CompanyInfo::ADDRESS !!}
+                                <i class="fa fa-map-marker-alt mr-2"></i> Địa chỉ: {!! \App\Helper\CompanyInfo::ADDRESS !!}
                             </a>
+                        </p>
+                        <p>
+                            <i class="fa fa-home mr-2"></i>VPGD: {!! \App\Helper\CompanyInfo::OFFICE !!}
                         </p>
                         <p>
                             <a href="tel:0846863336">
